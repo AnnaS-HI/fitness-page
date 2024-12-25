@@ -34,3 +34,22 @@ overlay.addEventListener('click', () => {
   // Скрыть затемнение
   overlay.style.display = 'none';
 });
+// Функция для отображения поп-апа
+function showPopup(popupElement) {
+  // Получаем текущую позицию прокрутки
+  const scrollY = window.scrollY;
+
+  // Устанавливаем положение поп-апа
+  popupElement.style.display = 'block';
+  popupElement.style.top = `${scrollY + window.innerHeight / 2}px`; // Середина экрана по Y
+  popupElement.style.left = '50%'; // Середина экрана по X
+  popupElement.style.transform = 'translate(-50%, -50%)';
+}
+
+// Пример использования
+document.querySelectorAll('.intensives__image').forEach((image) => {
+  image.addEventListener('click', () => {
+    const popup = image.closest('.intensives__card').querySelector('.popup');
+    showPopup(popup);
+  });
+});
