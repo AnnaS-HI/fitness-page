@@ -83,24 +83,44 @@ body {
   display: none;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 /* Стили всплывающего окна */
 .popup {
   position: absolute;
   background-color: $color-popup-bg;
   border-radius: $radius-large;
-  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2); /* 4px 15px */
-  padding: 1.25rem; /* 20px */
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2); 
+  padding: 1.25rem; 
   z-index: 10;
   display: none;
-  width: 36rem; /* 396px */
-  height: 40rem; /* 510px */
-  max-height: 80vh; /* Максимальная высота окна */
-  overflow-y: auto; /* Добавляем скролл по вертикали */  
-
-  /* Центрируем поп-ап */
+  width: 36rem; 
+  max-width: 90%; 
+  height: auto; 
+  max-height: 80vh; 
+  overflow-y: auto;  box-sizing: border-box;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow-y: auto; 
+  overflow-x: hidden; 
+}
+
+.popup::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 26rem;
+  width: 300%; 
+  height: 10rem; 
+  background: url('../images/wave-line.png') no-repeat;
+  background-size: contain;
+  z-index: 1;
+  opacity: 0.5;
 }
 
 .popup-title {
@@ -121,18 +141,18 @@ body {
 .popup__list,
 .popup__sublist {
   margin: 0 0 1rem 0;
-  padding-left: 1.5rem; /* Отступ для списка */
-  list-style-type: disc; /* Точки для списка */
+  padding-left: 1.5rem; 
+  list-style-type: disc; 
   text-align: left;
 }
 
 .popup__list ul {
-  padding-left: 1rem; /* Для вложенных списков */
+  padding-left: 1rem; 
   list-style-type: circle;
 }
 
 .popup__list li {
-  margin-bottom: 0.5rem; /* Отступ между элементами списка */
+  margin-bottom: 0.5rem; 
   font-family: $font-primary;
   font-size: 0.875rem; /* 14px */
   color: $color-secondary;
@@ -155,13 +175,28 @@ body {
 .intensives__close {
   background: none;
   border: none;
-  font-size: 1.5rem; /* 24px */
-  color: $color-primary;
+  font-size: 2rem; 
+  font-weight: bold; 
+  color: $color-secondary;
   position: absolute;
   top: 0.625rem; /* 10px */
   right: 0.625rem; /* 10px */
   cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  z-index: 2;
+
 }
+
+.popup a {
+  color: $color-bg-light; 
+  text-decoration: none;
+}
+
+.popup a:hover {
+  color: lighten($color-bg-light, 10%); 
+  text-decoration: underline; 
+}
+
 
 .popup__close:hover,
 .intensives__close:hover {
@@ -169,7 +204,7 @@ body {
 }
 
 .popup::-webkit-scrollbar {
-  width: 0.5rem; /* Ширина скроллбара */
+  width: 0.5rem; 
 }
 
 .popup::-webkit-scrollbar-thumb {
@@ -250,29 +285,37 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.625rem; /* 42px */
-  justify-content: center;
+  justify-content: center;   align-items: center; 
+  width: 100%; 
+  margin: 0 auto; 
 }
 
 .intensives__card {
-  width: 24.75rem; // 396px
+  width: 24.375rem; // 396px
   height: 31.875rem; // 510px
   background-color: $color-bg-light;
-  border: 0.0625rem solid $color-border; /* 1px */
   border-radius: $radius-small;
   overflow: hidden;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  padding: 1rem 1rem 2rem; 
 }
 
 .intensives__image-wrapper {
   width: 24.375rem; // 390px
   height: 16.875rem; // 270px
   overflow: hidden;
+  border-radius: $radius-small;
+  position: relative;
 }
 
 .intensives__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .intensives__card:nth-child(1) .intensives__image,
@@ -281,12 +324,27 @@ body {
   object-position: top;
 }
 
+.intensives__image:hover {
+  transform: scale(1.1); 
+  filter: brightness(0.5);
+}
+
+.intensives__card:hover .intensives__image {
+  transform: scale(1.1) translateY(-5px);
+}
 
 .intensives__name {
   font-family: $font-secondary;
   font-size: 1.5rem; /* 24px */
   color: $color-primary;
-  margin: 1.25rem 0; /* 20px */
+  text-align: center;
+  line-height: 1.4; 
+  word-wrap: break-word; 
+  max-width: 68%; 
+  margin: 1rem auto 0; 
+  min-height: 3rem;
+  align-items: center; 
+  justify-content: center;
 }
 
 .intensives__button {
@@ -300,11 +358,13 @@ body {
   color: $color-secondary;
   border: none;
   cursor: pointer;
-  transition: background-color $transition-fast;
+  transition: background-color $transition-fast, transform $transition-fast;
+  align-self: center; 
+  margin-top: auto; 
 }
 
 .intensives__button:hover {
-  background-color: lighten($color-primary, 10%);
+  background-color: lighten($color-primary, 10%); transform: scale(1.05);
 }
 
 /* Медиазапросы */
@@ -322,19 +382,42 @@ body {
   .intensives__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem; // 32px
+    gap: 3rem; /* 48px */
     justify-content: center;
   }
 
 }
 
-
 @media (max-width: 768px) { // Мобильные устройства
   .intensives__cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem; // 24px
-    justify-content: center;
+    grid-template-columns: 1fr;  
+    gap: 2rem; 
+    justify-content: center; 
+    padding: 0 1rem;
+    margin: 0 auto; 
+  }
+
+  .intensives__card {
+    margin: 0 auto; 
+    max-width: 90%; 
+  }
+
+  .popup {
+    width: 90%;
+    padding: 1rem; 
+    border-radius: $radius-small; 
+  }
+
+  .popup-title {
+    font-size: 1rem; /* 16px */
+  }
+
+  .popup-description {
+    font-size: 0.8125rem; /* 13px */
+  }
+
+  .popup__list li {
+    font-size: 0.8125rem; /* 13px */
   }
 }
 
