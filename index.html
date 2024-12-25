@@ -4,9 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Наталья Матвеева</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
   </head>
   <body>
+    <div class="overlay"></div>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero__content">
+        <!-- код -->
+      </div>
+    </section>
+
     <!-- About Section -->
     <section class="about" id="about">
       <div class="about__content">
@@ -30,8 +38,234 @@
 
     <!-- Intensives Section -->
     <section class="intensives" id="intensives">
-      <div class="intensives__content">
-        <!-- код -->
+      <div class="intensives__container">
+        <h2 class="intensives__title">Интенсивы</h2>
+        <div class="intensives__cards">
+          <!-- Первая карточка -->
+          <div class="intensives__card" onclick="togglePopup(this)">
+            <div class="intensives__image-wrapper">
+              <img
+                src="./assets/images/intensiv_card1.jpg"
+                alt="Диагностическая консультация"
+                class="intensives__image"
+              />
+            </div>
+            <h3 class="intensives__name">Диагностическая консультация</h3>
+            <a
+              href="https://t.me/ns_matveeva"
+              target="_blank"
+              rel="noopener"
+              class="intensives__link"
+            >
+              <button class="intensives__button">Записаться</button>
+            </a>
+            <!-- Всплывающее окно -->
+            <div class="popup hidden">
+              <button class="popup__close" onclick="closePopup(this)">×</button>
+              <h3 class="popup__title">Диагностическая консультация</h3>
+              <p class="popup__description">
+                - онлайн встреча 20-30 минут - Сбор анамнеза, обсуждение
+                симптомов, запрос - Индивидуальная диагностика осанки, дыхания,
+                движения - Составление плана действий
+              </p>
+            </div>
+          </div>
+
+          <!-- Повторяй карточки -->
+          <div class="intensives__card" onclick="togglePopup(this)">
+            <div class="intensives__image-wrapper">
+              <img
+                src="./assets/images/intensiv_card2.jpg"
+                alt="Групповые тренировки"
+                class="intensives__image"
+              />
+            </div>
+            <h3 class="intensives__name">Групповые тренировки</h3>
+            <a
+              href="https://t.me/ns_matveeva"
+              target="_blank"
+              rel="noopener"
+              class="intensives__link"
+            >
+              <button class="intensives__button">Записаться</button>
+            </a>
+            <!-- Всплывающее окно -->
+            <div class="popup hidden">
+              <button class="popup__close" onclick="closePopup(this)">×</button>
+              <h3 class="popup__title">Групповые тренировки</h3>
+              <p class="popup__description">
+                - составление группового тренировочного плана - Рекомендации по
+                бытовым привычкам, самостоятельным занятиям - Проверка техники -
+                Продолжительность 35-40 минут - Запись занятия
+              </p>
+            </div>
+          </div>
+
+          <div class="intensives__card" onclick="togglePopup(this)">
+            <div class="intensives__image-wrapper">
+              <img
+                src="./assets/images/intensiv_card3.jpg"
+                alt="Персональные тренировки"
+                class="intensives__image"
+              />
+            </div>
+            <h3 class="intensives__name">Персональные тренировки</h3>
+            <a
+              href="https://t.me/ns_matveeva"
+              target="_blank"
+              rel="noopener"
+              class="intensives__link"
+            >
+              <button class="intensives__button">Записаться</button>
+            </a>
+            <!-- Всплывающее окно -->
+            <div class="popup hidden">
+              <button class="popup__close" onclick="closePopup(this)">×</button>
+              <h3 class="popup__title">Персональные тренировки</h3>
+              <p class="popup__description">
+                - составление индивидуального тренировочного плана под Ваш
+                запрос - Рекомендации по бытовым привычкам, самостоятельным
+                занятиям - Проверка техники - Продолжительность 35-40 минут -
+                Запись занятия
+              </p>
+            </div>
+          </div>
+
+          <!-- Добавим второй ряд -->
+          <div class="intensives__card" onclick="togglePopup(this)">
+            <div class="intensives__image-wrapper">
+              <img
+                src="./assets/images/intensiv_card4.jpg"
+                alt="Детокс марафон"
+                class="intensives__image"
+              />
+            </div>
+            <h3 class="intensives__name">Детокс марафон</h3>
+            <a
+              href="https://t.me/ns_matveeva"
+              target="_blank"
+              rel="noopener"
+              class="intensives__link"
+            >
+              <button class="intensives__button">Записаться</button>
+            </a>
+            <!-- Всплывающее окно -->
+            <div class="popup hidden">
+              <button class="popup__close" onclick="closePopup(this)">×</button>
+              <h3 class="popup__title">Детокс марафон</h3>
+              <p class="popup__description">
+                Программа очищение направлена на очищение от токсинов, вредных
+                веществ наших "фильтров" организма: кишечник, печень, почки.
+                Симптомы: - состояние кожи (тусклый цвет, сухость, высыпания,
+                потеря эластичности, усиление процессов окисления, а значит
+                преждевременное старение) - Ломкие, сухие, секущиеся волосы
+                (ногти) - Вздутия, тяжесть, проблемы аппетита - Запоры -
+                снижение защитной функции организма (иммунитет) Если вы хотите:
+                - снизить вес - найти причины пищевых зависимостей -
+                сформировать новое пищевое поведение - наладить работу ЖКТ -
+                Уйти от перекусов - чувствовать легкость и свободу от еды
+                Приглашаю на детокс-марафон. Внедрив это в свою жизнь результат
+                останется с нами надолго 💯 Программа марафона: - сопровождение
+                нутрициолога (план и правила питания, примеры готовых блюд) -
+                силовые тренировки - работа с тазовым дном ﻿﻿- работа с
+                психотерапевтом ﻿﻿- чат поддержки ﻿﻿- обратная связь от
+                специалистов Если есть воспаления в кишечнике, излишний
+                бактериальный/грибковый рост, витамины и минералы усваиваться
+                будут плохо. Нет смысла тратить кучу денег в аптеке! сначала
+                лучше поработать с кишечником. А уже здоровый микробиом
+                наполнять витаминами, микроэлементами. Вход через кейс
+                продуктов-помощников. Цена индивидуальная. Свяжись со мной,
+                чтобы узнать подробности.
+              </p>
+            </div>
+          </div>
+
+          <div class="intensives__card" onclick="togglePopup(this)">
+            <div class="intensives__image-wrapper">
+              <img
+                src="./assets/images/intensiv_card5.jpg"
+                alt="Курс для беременных"
+                class="intensives__image"
+              />
+            </div>
+            <h3 class="intensives__name">Курс для беременных</h3>
+            <a
+              href="https://t.me/ns_matveeva"
+              target="_blank"
+              rel="noopener"
+              class="intensives__link"
+            >
+              <button class="intensives__button">Записаться</button>
+            </a>
+            <!-- Всплывающее окно -->
+            <div class="popup hidden">
+              <button class="popup__close" onclick="closePopup(this)">×</button>
+              <h3 class="popup__title">Курс для беременных</h3>
+              <p class="popup__description">
+                Курс-конструктор для будущих мам с разным уровнем подготовки.
+                Программа: Обучающее видео по дыханию; 4 зарядки до 10 минут: -
+                3Д разминка: позвоночник и ТБС - активная зарядка - Разминка для
+                ленивых (9 минут) - Разминка на фитболе (9 минут) 9
+                разнонаправленных тренировок от 15 до 27 минут: - Комплекс Кошка
+                - работа с осанкой - Тренировка малой интенсивности на коврике -
+                Мобильный таз - Руки и грудной отдел с эластичной лентой -
+                Силовая тренировка на все тело с ремнем - Стопы с теннисным
+                (массажным) мячом - Тренировка ног и ягодиц со стулом -
+                тренировка с фитболом на все тело - Тренировка средней
+                интенсивности на все тело 4 урока по работе мышц тазового дна в
+                движении с акцентом на костные ориентиры В зависимости от
+                самочувствия можно комбинировать зарядка+тренировка, можно
+                выполнять отдельно. Есть противопоказания! Связаться, чтобы
+                узнать подробности.
+              </p>
+            </div>
+          </div>
+
+          <div class="intensives__card" onclick="togglePopup(this)">
+            <div class="intensives__image-wrapper">
+              <img
+                src="./assets/images/intensiv_card6.jpg"
+                alt="Индивидуальная тренировка"
+                class="intensives__image"
+              />
+            </div>
+            <h3 class="intensives__name">Экспресс-пресс за 6 недель</h3>
+            <a
+              href="https://docs.google.com/forms/d/1Z9SPAXyp0cRwddO7dG0o2KaZON7x658tNLoXFkrBow0/viewform?edit_requested=true"
+              target="_blank"
+              rel="noopener"
+              class="intensives__link"
+            >
+              <button class="intensives__button">Записаться</button>
+            </a>
+            <!-- Всплывающее окно -->
+            <div class="popup hidden">
+              <button class="popup__close" onclick="closePopup(this)">×</button>
+              <h3 class="popup__title">Экспресс-пресс за 6 недель</h3>
+              <p class="popup__description">
+                Интенсив "6 недель" Тариф 1: "Общий" - 18 основных тренировок по
+                20-25 минут с акцентом на мышцы живота, (включаем поперечную
+                мышцу живота, учимся контролировать диастаз) - 7 дополнительных
+                блоков: • скорая помощь при болях в пояснице, крестце • МФР с
+                массажными мячами (снимаем напряжение в грудной клетке, шее,
+                плечах, избавляемся от тазовых болей) • дыхание и диафрагма
+                (улучшаем грудное дыхание, движение и положение грудной клетки,
+                улучшаем согласование грудной клетки и таза) • работа с
+                перекосами таза (сбалансируем положение таза) • динамическая
+                растяжка (улучшаем гибкость безопасно для мышц, связок) • отеки
+                (практика для быстрого снятия отеков с области лица) • силовая
+                (добавим нагрузку на 5 и 6 неделе курса) - упражнения Кегеля, -
+                пятиминутки - ответы на вопросы в общем чате - еженедельная
+                проверка техники - мотивация и поддержка в чате Доступ 6 недель
+                + 6 недель после окончания Тариф 2 "Индивидуальный" - все, что
+                на тарифе 1 - личный чат со мной - ежедневная мотивация в
+                удобном для вас формате - индивидуальная диагностика перед
+                курсом + рекомендации - еженедельная персональная онлайн
+                тренировка со мной 35-40 минут.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -74,5 +308,6 @@
         <!-- код -->
       </div>
     </footer>
+    <script src="./js/scripts.js"></script>
   </body>
 </html>
