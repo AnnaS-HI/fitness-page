@@ -369,12 +369,9 @@ justify-content: center;
 align-items: center;
 z-index: 1;
 overflow: auto;
-opacity: 0;
-transition: opacity 0.3s;
 
-.modal__open {
-  opacity: 1;
-}
+
+
 
 
 .modal__body1 {

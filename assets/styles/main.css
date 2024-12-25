@@ -332,11 +332,6 @@ body {
   align-items: center;
   z-index: 1;
   overflow: auto;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.modal .modal__open {
-  opacity: 1;
 }
 .modal .modal__body1 {
   width: 300px;
