@@ -2,26 +2,43 @@
 /* General Styles */
 @font-face {
   font-family: "Cardo";
-  src: url("../fonts/Cardo/cardo-regular-webfont.woff2") format("woff2"),
-    url("../fonts/Cardo/cardo-regular-webfont.woff") format("woff");
+  src: url("../fonts/Cardo/cardo-regular-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Cardo";
-  src: url("../fonts/Cardo/cardo-bold-webfont.woff2") format("woff2"),
-    url("../fonts/Cardo/cardo-bold-webfont.woff") format("woff");
+  src: url("../fonts/Cardo/cardo-bold-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Cardo";
-  src: url("../fonts/Cardo/cardo-italic-webfont.woff2") format("woff2"),
-    url("../fonts/Cardo/cardo-italic-webfont.woff") format("woff");
+  src: url("../fonts/Cardo/cardo-italic-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-italic-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-Thin.woff2") format("woff2"), url("../fonts/Raleway/Raleway-Thin.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway/Raleway-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-ThinItalic.woff2") format("woff2"), url("../fonts/Raleway/Raleway-ThinItalic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
 }
 /* Переменные */
+/* 10px */
+/* 15px */
 body {
   margin: 0;
   font-family: "Cardo", Arial, sans-serif;
@@ -47,36 +64,78 @@ body {
 .popup {
   position: absolute;
   background-color: #c5b1aa;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  border-radius: 0.9375rem;
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2); /* 4px 15px */
+  padding: 1.25rem; /* 20px */
   z-index: 10;
   display: none;
+  width: 36rem; /* 396px */
+  height: 40rem; /* 510px */
+  max-height: 80vh; /* Максимальная высота окна */
+  overflow-y: auto; /* Добавляем скролл по вертикали */
+  /* Центрируем поп-ап */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .popup-title {
-  font-family: "Maharlika", serif;
-  font-size: 20px;
+  font-family: "Raleway", serif;
+  font-size: 1.25rem; /* 20px */
   color: #cda498;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem; /* 15px */
+}
+
+.popup__subtitle {
+  font-family: "Cardo", Arial, sans-serif;
+  font-size: 1.125rem; /* 18px */
+  color: #2e2e2f;
+  margin-top: 1rem; /* 16px */
+  margin-bottom: 0.5rem; /* 8px */
+}
+
+.popup__list,
+.popup__sublist {
+  margin: 0 0 1rem 0;
+  padding-left: 1.5rem; /* Отступ для списка */
+  list-style-type: disc; /* Точки для списка */
+  text-align: left;
+}
+
+.popup__list ul {
+  padding-left: 1rem; /* Для вложенных списков */
+  list-style-type: circle;
+}
+
+.popup__list li {
+  margin-bottom: 0.5rem; /* Отступ между элементами списка */
+  font-family: "Cardo", Arial, sans-serif;
+  font-size: 0.875rem; /* 14px */
+  color: #2e2e2f;
+}
+
+.popup__sublist {
+  list-style-type: circle; /* Вложенные списки – кружки */
+  margin-top: 0.5rem; /* 8px */
 }
 
 .popup-description {
   font-family: "Cardo", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem; /* 14px */
   color: #2e2e2f;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* 20px */
+  overflow: auto; /* Если текста слишком много, добавляем прокрутку */
 }
 
 .popup__close,
 .intensives__close {
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   color: #cda498;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0.625rem; /* 10px */
+  right: 0.625rem; /* 10px */
   cursor: pointer;
 }
 
@@ -85,88 +144,103 @@ body {
   color: rgb(221.6666666667, 194.3333333333, 186.3333333333);
 }
 
+.popup::-webkit-scrollbar {
+  width: 0.5rem; /* Ширина скроллбара */
+}
+
+.popup::-webkit-scrollbar-thumb {
+  background-color: #ffffff; /* Цвет полоски */
+  border-radius: 0.625rem; /* Скругление */
+}
+
+.popup::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(71.2258064516, 71.2258064516, 72.7741935484); /* Более светлый цвет при наведении */
+}
+
 /* Hero Section */
 .hero {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem; /* 40px 20px */
   background-color: #f9f9f9;
 }
 
 .hero__content {
-  max-width: 1200px;
+  max-width: 75rem; /* 1200px */
   margin: 0 auto;
 }
 
 /* About Section */
 .about {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem; /* 40px 20px */
   background-color: #f9f9f9;
 }
 
 .about__content {
-  max-width: 1200px;
+  max-width: 75rem; /* 1200px */
   margin: 0 auto;
 }
 
 /* Path Section */
 .path {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem; /* 40px 20px */
   background-color: #e6e6e6;
 }
 
 .path__content {
-  max-width: 1200px;
+  max-width: 75rem; /* 1200px */
   margin: 0 auto;
 }
 
 /* Training Section */
 .training {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem; /* 40px 20px */
   background-color: #f5f5f5;
 }
 
 .training__content {
-  max-width: 1200px;
+  max-width: 75rem; /* 1200px */
   margin: 0 auto;
 }
 
 /* Intensives Section */
 .intensives {
   background-color: #ffffff;
-  padding: 50px 20px;
+  padding: 3.125rem 1.25rem; /* 50px 20px */
   text-align: center;
 }
 
 .intensives__container {
-  max-width: 1260px;
+  max-width: 78.75rem; /* 1260px */
   margin: 0 auto;
 }
 
 .intensives__title {
-  font-family: "Maharlika", serif;
-  font-size: 36px;
+  font-family: "Raleway", serif;
+  font-size: 2.25rem; /* 36px */
   color: #cda498;
-  margin-bottom: 120px;
+  margin-bottom: 7.5rem; /* 120px */
 }
 
 /* Сетка карточек */
 .intensives__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 42px;
+  gap: 2.625rem; /* 42px */
   justify-content: center;
 }
 
 .intensives__card {
-  background-color: #f9f9f9;
-  border: 1px solid #e6e6e6;
-  border-radius: 10px;
+  width: 24.75rem;
+  height: 31.875rem;
+  background-color: #ffffff;
+  border: 0.0625rem solid #e6e6e6; /* 1px */
+  border-radius: 0.625rem;
   overflow: hidden;
   text-align: center;
 }
 
 .intensives__image-wrapper {
-  width: 100%;
-  height: 270px;
+  width: 24.375rem;
+  height: 16.875rem;
   overflow: hidden;
 }
 
@@ -176,21 +250,27 @@ body {
   object-fit: cover;
 }
 
+.intensives__card:nth-child(1) .intensives__image,
+.intensives__card:nth-child(6) .intensives__image {
+  object-fit: cover;
+  object-position: top;
+}
+
 .intensives__name {
-  font-family: "Maharlika", serif;
-  font-size: 24px;
+  font-family: "Raleway", serif;
+  font-size: 1.5rem; /* 24px */
   color: #cda498;
-  margin: 20px 0;
+  margin: 1.25rem 0; /* 20px */
 }
 
 .intensives__button {
   display: inline-block;
-  width: 258px;
-  height: 68px;
-  border-radius: 15px;
+  width: 16.125rem; /* 258px */
+  height: 4.25rem; /* 68px */
+  border-radius: 0.9375rem;
   background-color: #cda498;
   font-family: "Cardo", Arial, sans-serif;
-  font-size: 15px;
+  font-size: 0.9375rem; /* 15px */
   color: #2e2e2f;
   border: none;
   cursor: pointer;
@@ -201,58 +281,74 @@ body {
   background-color: rgb(221.6666666667, 194.3333333333, 186.3333333333);
 }
 
-/* Медиазапрос для мобильных устройств */
+/* Медиазапросы */
+@media (min-width: 1025px) {
+  /* Для больших экранов: 3 карточки в ряду */
+  .intensives__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+  }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  .intensives__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+  }
+}
 @media (max-width: 768px) {
   .intensives__cards {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-  }
-  .intensives__image-wrapper {
-    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-content: center;
   }
 }
 /* Advantages Section */
 .advantages {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem; /* 40px 20px */
   background-color: #f2f2f2;
 }
 
 .advantages__content {
-  max-width: 1200px;
+  max-width: 75rem; /* 1200px */
   margin: 0 auto;
 }
 
 /* Reviews Section */
 .reviews {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem; /* 40px 20px */
   background-color: #eaeaea;
 }
 
 .reviews__content {
-  max-width: 1200px;
+  max-width: 75rem; /* 1200px */
   margin: 0 auto;
 }
 
 /* Blog Section */
 .blog {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem; /* 40px 20px */
   background-color: #fafafa;
 }
 
 .blog__content {
-  max-width: 1200px;
+  max-width: 75rem; /* 1200px */
   margin: 0 auto;
 }
 
 /* Footer Section */
 .footer {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem; /* 40px 20px */
   background-color: #333333;
   color: #ffffff;
 }
 
 .footer__content {
-  max-width: 1200px;
+  max-width: 75rem; /* 1200px */
   margin: 0 auto;
 }
 
