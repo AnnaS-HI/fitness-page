@@ -1,0 +1,63 @@
+/* General Styles */
+
+@font-face {
+    font-family: 'Cardo';
+    src: url('../fonts/Cardo/cardo-regular-webfont.woff2') format('woff2'),
+      url('../fonts/Cardo/cardo-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Cardo';
+    src: url('../fonts/Cardo/cardo-bold-webfont.woff2') format('woff2'),
+      url('../fonts/Cardo/cardo-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Cardo';
+    src: url('../fonts/Cardo/cardo-italic-webfont.woff2') format('woff2'),
+      url('../fonts/Cardo/cardo-italic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-Thin.woff2') format('woff2'),
+      url('../fonts/Raleway/Raleway-Thin.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-Bold.woff2') format('woff2'),
+      url('../fonts/Raleway/Raleway-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-ThinItalic.woff2') format('woff2'),
+      url('../fonts/Raleway/Raleway-ThinItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+.about{
+  color: #e6e6e6;
+  font-family: 'Cardo';
+  
+}
+
+  .about__content{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gr
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }
