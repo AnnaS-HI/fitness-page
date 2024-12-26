@@ -37,6 +37,8 @@
   font-style: italic;
 }
 /* Переменные */
+/* 10px */
+/* 15px */
 body {
   margin: 0;
   font-family: "Cardo", Arial, sans-serif;
@@ -62,7 +64,7 @@ body {
 .popup {
   position: absolute;
   background-color: #c5b1aa;
-  border-radius: 15px;
+  border-radius: 0.9375rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   padding: 20px;
   z-index: 10;
@@ -174,7 +176,7 @@ body {
 .intensives__card {
   background-color: #f9f9f9;
   border: 1px solid #e6e6e6;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   overflow: hidden;
   text-align: center;
 }
@@ -203,7 +205,7 @@ body {
   display: inline-block;
   width: 258px;
   height: 68px;
-  border-radius: 15px;
+  border-radius: 0.9375rem;
   background-color: #cda498;
   font-family: "Cardo", Arial, sans-serif;
   font-size: 15px;
@@ -251,12 +253,16 @@ body {
 
 /* Base Section */
 .base {
-  height: 740px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 2, 5rem 1, 25rem; /* 40px 20px */
 }
 .base a {
   color: #333333;
   font-family: "Cardo", Arial, sans-serif;
-  font-weight: 16px;
+  font-weight: 1rem; /* 16px */
   text-decoration: none;
 }
 .base a:hover {
@@ -265,28 +271,28 @@ body {
 
 .base__box {
   background-color: white;
-  padding: 40px;
+  padding: 2, 5rem; /* 40px */
 }
 .base__box h2 {
   font-family: "Cardo", Arial, sans-serif;
   color: #818b7e;
-  font-size: 29px;
-  text-align: center;
+  font-size: 2, 1875rem;
+  text-align: center; /* 35px */
 }
 .base__box h3 {
   font-family: "Raleway", serif;
   color: #818b7e;
-  font-size: 21px;
+  font-size: 1, 3125rem; /* 21px */
   font-weight: bold;
   text-align: center;
 }
 
 .base__cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 210px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13, 125rem; /* 210px */
   justify-items: center;
-  margin-top: 71px;
+  margin-top: 4, 4375rem; /* 71px */
 }
 .base__cards img {
   max-width: 225px;
@@ -298,7 +304,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 3, 75rem; /* 60px */
 }
 
 .base__btn {
@@ -306,13 +312,13 @@ body {
   font-family: "Raleway", serif;
   background-color: #818b7e;
   font-family: "Raleway", serif;
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-weight: bold;
   color: #f9f9f9;
-  width: 185px;
-  height: 48px;
+  width: 11, 5625rem; /* 185px */
+  height: 3rem; /* 48px */
   border: transparent;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   cursor: pointer;
 }
 
@@ -333,50 +339,39 @@ body {
   z-index: 1;
   overflow: auto;
 }
-.modal .modal__body1 {
-  width: 300px;
+.modal .modal__body1, .modal .modal__body2, .modal .modal__body3 {
+  position: relative;
+  max-width: 300px;
   height: auto;
   background: #c5b1aa;
-  margin: 100px;
-  position: relative;
-  padding: 20px;
-  border-radius: 40px;
-  margin: auto;
-}
-.modal .modal__body2 {
-  width: 300px;
-  height: auto;
-  background: #c5b1aa;
-  margin: 200px;
-  position: relative;
-  padding: 20px;
-  border-radius: 40px;
-  margin: auto;
-}
-.modal .modal__body3 {
-  width: 300px;
-  height: auto;
-  background: #c5b1aa;
-  margin: 400px;
-  position: relative;
-  padding: 20px;
-  border-radius: 40px;
+  padding: 1, 25rem; /* 20px */
+  border-radius: 2, 5rem; /* 40px */
   margin: auto;
 }
 .modal .modal__close {
   position: absolute;
-  top: 5px;
-  right: 10px;
+  top: 0, 3125rem; /* 5px */
+  right: 0, 625; /* 10px */
   cursor: pointer;
-  font-size: 50px;
+  font-size: 3, 125rem; /* 50px */
   border: none;
   color: #f9f9f9;
   background: transparent;
 }
 .modal p {
   font-family: "Cardo", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 10, 875rem; /* 14px */
   color: #f9f9f9;
+}
+
+.slogan {
+  font-family: "Raleway", serif;
+  font-size: 1, 875rem; /* 30px */
+  font-weight: 500;
+  color: #cda498;
+  margin-top: 11, 1875rem; /* 179px */
+  text-align: center;
+  padding: 1, 25rem; /* 20px */
 }
 
 /* Footer Section */

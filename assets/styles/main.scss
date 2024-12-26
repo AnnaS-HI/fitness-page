@@ -59,8 +59,8 @@ $color-popup-bg: #c5b1aa;
 $color-overlay: rgba(0, 0, 0, 0.8);
 $color-border: #e6e6e6;
 $transition-fast: 0.3s ease;
-$radius-small: 10px;
-$radius-large: 15px;
+$radius-small: 0.625rem; /* 10px */
+$radius-large: 0.9375rem; /* 15px */
 $color-section: #ffff;
 $color-modal-bg: #c5b1aa;
 $text-color: #818b7e;
@@ -283,12 +283,16 @@ body {
 
 /* Base Section */
 .base {
-  height: 740px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 2,5rem 1,25rem; /* 40px 20px */
 
   a { 
       color: $color-bg-dark;
       font-family: $font-primary;
-      font-weight: 16px;
+      font-weight: 1rem; /* 16px */
       text-decoration: none;
   }
   a:hover{
@@ -298,19 +302,19 @@ body {
 
 .base__box {
   background-color: $color-section ;
-  padding: 40px;
+  padding: 2,5rem; /* 40px */
   
   h2 {
     font-family: $font-primary;
     color: $text-color;
-    font-size: 29px;
-    text-align: center;
+    font-size: 2,1875rem;
+    text-align: center; /* 35px */
   }
 
   h3 {
     font-family: $font-secondary ;
     color: $text-color;
-    font-size: 21px;
+    font-size: 1,3125rem; /* 21px */
     font-weight: bold;
     text-align: center;
   }
@@ -319,10 +323,10 @@ body {
 
 .base__cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 210px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13,125rem; /* 210px */
   justify-items: center;
-  margin-top: 71px;
+  margin-top: 4,4375rem; /* 71px */
   
   img {
     max-width: 225px ;
@@ -335,7 +339,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 3,75rem; /* 60px */
 }
 
 .base__btn {
@@ -343,13 +347,13 @@ body {
   font-family: $font-secondary ;
   background-color: $text-color;
   font-family:  $font-secondary ;
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-weight: bold;
   color: $color-bg-light;
-  width: 185px;
-  height: 48px;
+  width: 11,5625rem; /* 185px */
+  height: 3rem;  /* 48px */
   border: transparent;
-  border-radius: 10px;
+  border-radius: $radius-small;
   cursor: pointer;
 
 }
@@ -374,47 +378,25 @@ overflow: auto;
 
 
 
-.modal__body1 {
-width: 300px;
+.modal__body1, .modal__body2, .modal__body3 {
+position: relative;
+max-width: 300px;
 height: auto;
 background: $color-modal-bg;
-margin: 100px;
-position: relative;
-padding: 20px;
-border-radius: 40px;
+padding: 1,25rem; /* 20px */
+border-radius: 2,5rem; /* 40px */
 margin: auto;
 }
 
-.modal__body2 {
-width: 300px;
-height: auto;
-background: $color-modal-bg;
-margin: 200px;
-position: relative;
-padding: 20px;
-border-radius: 40px;
-margin: auto;
 
-}
-
-.modal__body3 {
-width: 300px;
-height: auto;
-background: $color-modal-bg;
-margin: 400px;
-position: relative;
-padding: 20px;
-border-radius: 40px;
-margin: auto;
-}
 
 
 .modal__close {
 position: absolute;
-top: 5px;
-right: 10px;
+top: 0,3125rem; /* 5px */
+right: 0,625; /* 10px */
 cursor: pointer;
-font-size: 50px;
+font-size: 3,125rem; /* 50px */
 border: none;
 color: $color-bg-light;
 background: transparent;
@@ -423,9 +405,19 @@ background: transparent;
 
 p {
 font-family:  $font-primary ;
-font-size: 14px;
+font-size: 10,875rem ; /* 14px */
 color: $color-bg-light;
 }
+}
+
+.slogan {
+  font-family: $font-secondary;
+  font-size: 1,875rem; /* 30px */
+  font-weight: 500; 
+  color: $color-primary;
+  margin-top: 11,1875rem; /* 179px */
+  text-align: center;
+  padding: 1,25rem; /* 20px */
 }
 
 
