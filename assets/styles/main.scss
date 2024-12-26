@@ -84,7 +84,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -108,6 +108,7 @@ body {
   transform: translate(-50%, -50%);
   overflow-y: auto; 
   overflow-x: hidden; 
+  color: $color-bg-light;
 }
 
 .popup::before {
@@ -126,14 +127,12 @@ body {
 .popup-title {
   font-family: $font-secondary;
   font-size: 1.25rem; /* 20px */
-  color: $color-primary;
   margin-bottom: 0.9375rem; /* 15px */
 }
 
 .popup__subtitle {
   font-family: $font-primary;
   font-size: 1.125rem; /* 18px */
-  color: $color-secondary;
   margin-top: 1rem; /* 16px */
   margin-bottom: 0.5rem; /* 8px */
 }
@@ -144,6 +143,7 @@ body {
   padding-left: 1.5rem; 
   list-style-type: disc; 
   text-align: left;
+  font-family: $font-primary;
 }
 
 .popup__list ul {
@@ -155,7 +155,6 @@ body {
   margin-bottom: 0.5rem; 
   font-family: $font-primary;
   font-size: 0.875rem; /* 14px */
-  color: $color-secondary;
 }
 
 .popup__sublist {
@@ -166,7 +165,6 @@ body {
 .popup-description {
   font-family: $font-primary;
   font-size: 0.875rem; /* 14px */
-  color: $color-secondary;
   margin-bottom: 1.25rem; /* 20px */
   overflow: auto; /* Если текста слишком много, добавляем прокрутку */
 }
@@ -184,19 +182,17 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
   z-index: 2;
-
 }
 
 .popup a {
-  color: $color-bg-light; 
+  color: $color-secondary; 
   text-decoration: none;
 }
 
 .popup a:hover {
-  color: lighten($color-bg-light, 10%); 
+  color: lighten($color-secondary, 20%); 
   text-decoration: underline; 
 }
-
 
 .popup__close:hover,
 .intensives__close:hover {
@@ -208,7 +204,7 @@ body {
 }
 
 .popup::-webkit-scrollbar-thumb {
-  background-color:  $color-bg-light; /* Цвет полоски */
+  background-color:  $color-primary; /* Цвет полоски */
   border-radius: $radius-small; /* Скругление */
 }
 
@@ -269,8 +265,8 @@ body {
 }
 
 .intensives__container {
-  max-width: 78.75rem; /* 1260px */
-  margin: 0 auto;
+  max-width: 75rem; /* 1260px */
+  margin: 0 auto; padding: 0 1.25rem; box-sizing: border-box;
 }
 
 .intensives__title {
@@ -369,6 +365,10 @@ body {
 
 /* Медиазапросы */
 @media (min-width: 1025px) {
+  .intensives__container {
+    max-width: 75rem; /* 1200px */
+    padding: 0 1.25rem; /* Боковые отступы */
+  }
   /* Для больших экранов: 3 карточки в ряду */
   .intensives__cards {
     display: grid;
@@ -379,16 +379,35 @@ body {
 }
 
 @media (max-width: 1024px) and (min-width: 769px) { // Планшеты
+  .intensives__container {
+    max-width: 90%; /* Уменьшаем ширину контейнера */
+    padding: 0 1rem; /* Боковые отступы */
+  }
+
   .intensives__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem; /* 48px */
     justify-content: center;
   }
+  .popup::before {
+    left: 63.5rem; 
+    transform: translateX(-50%); 
+    width: 197%; 
+    height: 8rem; 
+    opacity: 0.5; 
+    background-size: contain; 
+  }
+
 
 }
 
 @media (max-width: 768px) { // Мобильные устройства
+  .intensives__container {
+    max-width: 100%; /* Контейнер занимает всю ширину экрана */
+    padding: 0 0.5rem; /* Уменьшенные боковые отступы */
+  }
+
   .intensives__cards {
     grid-template-columns: 1fr;  
     gap: 2rem; 
@@ -403,9 +422,13 @@ body {
   }
 
   .popup {
-    width: 90%;
+    width: 70%;
     padding: 1rem; 
     border-radius: $radius-small; 
+  }
+
+  .popup::before {
+    display: none;
   }
 
   .popup-title {
