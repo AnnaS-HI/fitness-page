@@ -1,73 +1,47 @@
+@charset "UTF-8";
 /* General Styles */
-
 @font-face {
-  font-family: 'Cardo';
-  src: url('../fonts/Cardo/cardo-regular-webfont.woff2') format('woff2'),
-    url('../fonts/Cardo/cardo-regular-webfont.woff') format('woff');
+  font-family: "Cardo";
+  src: url("../fonts/Cardo/cardo-regular-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'Cardo';
-  src: url('../fonts/Cardo/cardo-bold-webfont.woff2') format('woff2'),
-    url('../fonts/Cardo/cardo-bold-webfont.woff') format('woff');
+  font-family: "Cardo";
+  src: url("../fonts/Cardo/cardo-bold-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'Cardo';
-  src: url('../fonts/Cardo/cardo-italic-webfont.woff2') format('woff2'),
-    url('../fonts/Cardo/cardo-italic-webfont.woff') format('woff');
+  font-family: "Cardo";
+  src: url("../fonts/Cardo/cardo-italic-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-italic-webfont.woff") format("woff");
   font-weight: 400;
   font-style: italic;
 }
-
 @font-face {
-  font-family: 'Raleway';
-  src: url('../fonts/Raleway/Raleway-Thin.woff2') format('woff2'),
-    url('../fonts/Raleway/Raleway-Thin.woff') format('woff');
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-Thin.woff2") format("woff2"), url("../fonts/Raleway/Raleway-Thin.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'Raleway';
-  src: url('../fonts/Raleway/Raleway-Bold.woff2') format('woff2'),
-    url('../fonts/Raleway/Raleway-Bold.woff') format('woff');
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway/Raleway-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'Raleway';
-  src: url('../fonts/Raleway/Raleway-ThinItalic.woff2') format('woff2'),
-    url('../fonts/Raleway/Raleway-ThinItalic.woff') format('woff');
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-ThinItalic.woff2") format("woff2"), url("../fonts/Raleway/Raleway-ThinItalic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
 }
-
 /* Переменные */
-$font-primary: 'Cardo', Arial, sans-serif;
-$font-secondary: 'Raleway', serif;
-$color-primary: #cda498;
-$color-secondary: #2e2e2f;
-$color-bg-light: #f9f9f9;
-$color-bg-dark: #333333;
-$color-popup-bg: #c5b1aa;
-$color-overlay: rgba(0, 0, 0, 0.8);
-$color-border: #e6e6e6;
-$transition-fast: 0.3s ease;
-$radius-small: 10px;
-$radius-large: 15px;
-
 body {
   margin: 0;
-  font-family: 'Cardo', Arial, sans-serif;
+  font-family: "Cardo", Arial, sans-serif;
   line-height: 1.6;
 }
-
 
 /* Hero Section */
 .hero {
@@ -106,39 +80,42 @@ body {
 }
 
 .hero__title {
-  font-family: $font-primary;
+  font-family: "Cardo", Arial, sans-serif;
   font-size: 1.75rem; /* 28px */
   text-transform: uppercase;
-  margin-bottom: 1rem; color: #ffffff;
+  margin-bottom: 1rem;
+  color: #ffffff;
 }
 
 .hero__subtitle {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 1.625rem; /* 26px */
-  margin-bottom: 1rem; color: #ffffff;
+  margin-bottom: 1rem;
+  color: #ffffff;
 }
 
 .hero__description {
-  font-family: 'Cardo', sans-serif;
+  font-family: "Cardo", sans-serif;
   font-size: 1rem; /* 16px */
-  margin-bottom: 1.5rem; color: #ffffff;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
 }
 
 .hero__button {
   display: inline-block;
   background-color: #ffffff;
-  color:  $color-bg-dark;
-  font-family: 'Cardo', sans-serif;
+  color: #333333;
+  font-family: "Cardo", sans-serif;
   font-size: 0.9375rem; /* 15px */
   padding: 0.5rem 1.5rem;
-  border-radius: $radius-large;
+  border-radius: 15px;
   border: none;
   cursor: pointer;
-  transition: background-color $transition-fast;
+  transition: background-color 0.3s ease;
 }
 
 .hero__button:hover {
-  background-color: lighten(#ffffff, 10%);
+  background-color: white;
 }
 
 .hero__right {
@@ -149,13 +126,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #c5b1aa; 
+  background-color: #c5b1aa;
 }
 
 .hero__video {
   width: 100%; /* Занимает всю ширину контейнера */
   height: 100%; /* Заполняет весь контейнер */
-  object-fit: cover; /* Обрезка видео для заполнения контейнера */
+  -o-object-fit: cover;
+     object-fit: cover; /* Обрезка видео для заполнения контейнера */
   max-height: 41.563rem; /* 665px — ограничение высоты */
 }
 
@@ -180,7 +158,7 @@ body {
   display: block;
   width: 2rem; /* Длина полоски */
   height: 0.25rem; /* Толщина полоски */
-  background-color: $color-secondary; /* Цвет полоски */
+  background-color: #2e2e2f; /* Цвет полоски */
   border-radius: 0.125rem; /* Скругление концов */
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -220,7 +198,6 @@ body {
   transform: translateY(-0.75rem) rotate(-45deg);
 }
 
-
 .hero__nav-list {
   list-style: none;
   padding: 0;
@@ -232,15 +209,15 @@ body {
 }
 
 .hero__nav-list a {
-  color: $color-bg-light;
+  color: #f9f9f9;
   text-decoration: none;
-  font-family: $font-primary;
+  font-family: "Cardo", Arial, sans-serif;
   font-size: 1.25rem; /* 20px */
-  transition: color $transition-fast;
+  transition: color 0.3s ease;
 }
 
 .hero__nav-list a:hover {
-  color: lighten($color-bg-light, 10%);
+  color: white;
 }
 
 /* Скрытие скролла страницы, когда меню активно */
@@ -253,36 +230,29 @@ body.menu-open {
     flex-direction: column;
     height: auto;
   }
-
   .hero__container {
     flex-direction: column;
     gap: 2rem;
   }
-
   .hero__right {
     width: 100%;
     height: auto;
   }
 }
-
 @media (max-width: 768px) {
   .hero__container {
     flex-direction: column; /* Элементы отображаются вертикально */
     gap: 2rem; /* Расстояние между элементами */
   }
-
   .hero__left, .hero__right {
     flex: unset; /* Снимаем равное распределение */
     width: 100%; /* Колонки занимают всю ширину */
   }
-
   .hero__video {
     width: 100%; /* Видео адаптируется по ширине экрана */
     height: auto; /* Высота автоматически подстраивается */
   }
 }
-
-
 /* About Section */
 .about {
   padding: 40px 20px;
@@ -370,4 +340,4 @@ body.menu-open {
 .footer__content {
   max-width: 1200px;
   margin: 0 auto;
-}
+}/*# sourceMappingURL=main.css.map */

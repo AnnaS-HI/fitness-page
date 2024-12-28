@@ -4,14 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Наталья Матвеева</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
   </head>
   <body>
     <!-- Hero Section -->
     <section class="hero" id="hero">
-      <div class="hero__content">
-        <!-- код -->
+      <div class="hero__container">
+        <!-- Меню -->
+        <div class="hero__menu">
+          <button
+            class="hero__menu-button"
+            id="menu-toggle"
+            aria-label="Открыть меню"
+            title="Открыть меню"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <!-- Левая часть -->
+        <div class="hero__left">
+          <div class="hero__icon">
+            <img src="./assets/images/icon1.svg" alt="Иконка" />
+          </div>
+          <h1 class="hero__title">Наталья Матвеева</h1>
+          <h2 class="hero__subtitle">Женский фитнес-тренер</h2>
+          <p class="hero__description">
+            Через движение к сильному и здоровому телу
+          </p>
+          <button class="hero__button">Узнать подробнее</button>
+        </div>
+
+        <!-- Правая часть -->
+        <div class="hero__right">
+          <video class="hero__video" autoplay loop muted>
+            <source src="./assets/videos/hero_video.MOV" type="video/mp4" />
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
       </div>
+
+      <!-- Полупрозрачное меню -->
+      <nav class="hero__nav" id="nav-menu">
+        <ul class="hero__nav-list">
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#training">Тренировки</a></li>
+          <li><a href="#intensives">Интенсивы</a></li>
+          <li><a href="#advantages">Преимущества</a></li>
+          <li><a href="#path">Мой путь</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#blog">Блог</a></li>
+          <li><a href="#footer">Контакты</a></li>
+        </ul>
+      </nav>
     </section>
 
     <!-- About Section -->
@@ -69,5 +116,6 @@
         <!-- код -->
       </div>
     </footer>
+    <script src="./js/scripts.js"></script>
   </body>
 </html>
