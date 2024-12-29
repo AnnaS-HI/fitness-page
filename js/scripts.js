@@ -1,3 +1,11 @@
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = 'flex'; // Показать модальное окно
+}
+
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = 'none'; // Скрыть модальное окно
+}
+// Скрипт для секции Intensives
 // Найти все карточки интенсивов
 const cards = document.querySelectorAll('.intensives__card');
 // Найти элемент overlay
@@ -11,10 +19,16 @@ cards.forEach(card => {
 
   // Событие для показа окна при клике на изображение
   image.addEventListener('click', () => {
-    // Показать окно
+    // Устанавливаем координаты поп-апа относительно экрана
+    const rect = image.getBoundingClientRect(); // Получаем положение изображения
+    const scrollY = window.scrollY; // Текущее положение прокрутки
+    popup.style.top = `${rect.top + scrollY + rect.height / 2}px`; // Центр относительно Y
+    popup.style.left = `${rect.left + rect.width / 2}px`; // Центр относительно X
+    popup.style.transform = 'translate(-50%, -50%)'; // Центрируем относительно точки
+
+    // Показываем поп-ап
     popup.style.display = 'block';
-    // Показать затемнение
-    overlay.style.display = 'block';
+    overlay.style.display = 'block'; // Показываем затемнение
   });
 
   // Событие для закрытия окна (по крестику)
@@ -53,3 +67,4 @@ document.querySelectorAll('.intensives__image').forEach((image) => {
     showPopup(popup);
   });
 });
+// Скрипт для секции Intensives конец
