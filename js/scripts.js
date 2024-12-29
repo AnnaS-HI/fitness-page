@@ -1,10 +1,18 @@
 function openModal(modalId) {
-  document.getElementById(modalId).style.display = 'flex'; // Показать модальное окно
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = 'flex'; // Показываем модальное окно
+  }
 }
 
 function closeModal(modalId) {
-  document.getElementById(modalId).style.display = 'none'; // Скрыть модальное окно
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = 'none'; // Скрываем модальное окно
+  }
 }
+
+
 // Скрипт для секции Intensives
 // Найти все карточки интенсивов
 const cards = document.querySelectorAll('.intensives__card');
