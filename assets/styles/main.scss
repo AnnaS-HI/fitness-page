@@ -173,14 +173,14 @@ body {
   border: none;
   cursor: pointer;
   z-index: 1000; /* Поверх остальных элементов */
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 .hero__menu-button span {
   display: block;
   width: 2rem; /* Длина полоски */
   height: 0.25rem; /* Толщина полоски */
-  background-color: $color-secondary; /* Цвет полоски */
+  background-color: $color-border; /* Цвет полоски */
   border-radius: 0.125rem; /* Скругление концов */
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -190,9 +190,9 @@ body {
   position: fixed;
   top: 0;
   left: 0; /* Скрыто за пределами экрана */
-  width: 70%; /* Меню занимает 70% ширины экрана */
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* Полупрозрачный черный фон */
+  width: 30%; /* Меню занимает 70% ширины экрана */
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
   z-index: -9999999;
   display: flex;
   flex-direction: column;
