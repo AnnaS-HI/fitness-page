@@ -1,0 +1,12 @@
+  /* Training Section */
+
+  .training {
+      padding: 40px 20px;
+      background-color: #e6e6e6;
+      height: 900px;
+  }
+
+  .training__content {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
