@@ -13,15 +13,31 @@ body {
 .training__content {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
+    /*display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    gap: 20px;
+    gap: 20px;*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 100px;
+}
+
+.heading_text {
+    grid-column: 1 / 2;
+    bottom: 62px;
+    justify-items: start;
 }
 
 .training_text {
     height: 680px;
+    grid-column: 1 / 2;
+    /*display: flex;
+    flex-direction: column;*/
+}
+
+.training_image {
+    grid-column: 2 / 3;
 }
 
 .img_training {
@@ -55,6 +71,10 @@ body {
 }
 
 @media screen and (max-width: 400px) {
+    .training {
+        height: 700px;
+    }
+
     .training__content {
         display: flex;
         flex-direction: column;
@@ -65,11 +85,22 @@ body {
         text-align: center;
         font-size: 13px;
         margin: 0 auto;
+    }
+
+    .heading_text {
         order: 1;
     }
 
-    .training_points li {
-        font-size: 9px;
+    .training_image {
+        order: 2;
+        /* Картинка сразу после заголовка */
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .training_text {
+        order: 3;
+        width: 280px;
     }
 
     .img_training {
@@ -78,15 +109,18 @@ body {
         border-radius: 35px;
     }
 
-    .training_image {
-        order: 2;
+
+    .training_points li {
+        font-size: 9px;
+        margin-top: 15px;
     }
 
-    .training_points {
-        order: 3;
+    .ending_text {
+        margin-top: 34px;
     }
 
     .ending {
-        order: 3;
+        font-size: 12px;
     }
+
 }
