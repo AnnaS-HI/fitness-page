@@ -1,12 +1,52 @@
-  /* Training Section */
+.training {
+    padding: 40px 20px;
+    background-color: #e6e6e6;
+    height: 900px;
+}
 
-  .training {
-      padding: 40px 20px;
-      background-color: #e6e6e6;
-      height: 900px;
-  }
+.training__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
 
-  .training__content {
-      max-width: 1200px;
-      margin: 0 auto;
-  }
+.training_text {
+    height: 680px;
+}
+
+.img_training {
+    width: 525px;
+    height: 680px;
+    border-radius: 35px;
+    object-fit: cover;
+}
+
+.heading {
+    font-size: 36px;
+    color: #818b7e;
+    display: block;
+    margin-bottom: 62px;
+    font-family: Raleway;
+}
+
+.training_points li {
+    font-size: 21px;
+    color: #818b7e;
+    margin-top: 35px;
+    text-align: justify;
+}
+
+.ending {
+    /*font-family: Raleway;
+    font-size: 24px;
+    font-style: bold;*/
+    color: #818b7e;
+    font: bold 24px Raleway;
+    margin-top: 62px;
+    display: block;
+    text-align: center;
+}
