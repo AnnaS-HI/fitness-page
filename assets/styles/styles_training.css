@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
 .training {
     padding: 40px 20px;
     background-color: #e6e6e6;
@@ -41,12 +47,46 @@
 }
 
 .ending {
-    /*font-family: Raleway;
-    font-size: 24px;
-    font-style: bold;*/
     color: #818b7e;
     font: bold 24px Raleway;
     margin-top: 62px;
     display: block;
     text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+    .training__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 13px;
+        margin: 0 auto;
+        order: 1;
+    }
+
+    .training_points li {
+        font-size: 9px;
+    }
+
+    .img_training {
+        width: 150px;
+        height: 220px;
+        border-radius: 35px;
+    }
+
+    .training_image {
+        order: 2;
+    }
+
+    .training_points {
+        order: 3;
+    }
+
+    .ending {
+        order: 3;
+    }
 }
