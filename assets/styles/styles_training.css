@@ -13,11 +13,6 @@ body {
 .training__content {
     max-width: 1200px;
     margin: 0 auto;
-    /*display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    gap: 20px;*/
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 100px;
@@ -32,8 +27,6 @@ body {
 .training_text {
     height: 680px;
     grid-column: 1 / 2;
-    /*display: flex;
-    flex-direction: column;*/
 }
 
 .training_image {
