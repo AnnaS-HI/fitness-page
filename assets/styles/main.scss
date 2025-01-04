@@ -26,16 +26,118 @@ body {
   }
   
   /* Training Section */
+.training {
+    padding: 2.5rem 1.25rem; /* 40px 20px */
+    background-color: #e6e6e6;
+    height: 56.25rem; /* 900px */
+    width: 100%;
+}
 
-  .training {
-    padding: 40px 20px;
-    background-color: $trainig-color;
-    height: 900px;
-  }
-  .training__content {
-    max-width: 1200px;
+.training__content {
+    max-width: 75rem; /* 1200px */
     margin: 0 auto;
-  }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 6.25rem; /* 100px */
+}
+
+.heading_text {
+    grid-column: 1 / 2;
+    bottom: 3.875rem; /* 62px */
+    justify-items: start;
+}
+
+.training_text {
+    height: 42.5rem; /* 680px */
+    grid-column: 1 / 2;
+}
+
+.training_image {
+    grid-column: 2 / 3;
+}
+
+.img_training {
+    width: 32.8125rem; /* 525px */
+    height: 42.5rem; /* 680px */
+    border-radius: 2.1875rem; /* 35px */
+    object-fit: cover;
+}
+
+.heading {
+    font-size: 2.25rem; /* 36px */
+    color: #818b7e;
+    display: block;
+    margin-bottom: 3.875rem; /* 62px */
+    font-family: Raleway;
+}
+
+.training_points li {
+    font-size: 1.3125rem; /* 21px */
+    color: #818b7e;
+    margin-top: 2.1875rem; /* 35px */
+    text-align: justify;
+}
+
+.ending {
+    color: #818b7e;
+    font: bold 1.5rem Raleway; /* 24px */
+    margin-top: 3.875rem; /* 62px */
+    display: block;
+    text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+    .training {
+        height: 43.75rem; /* 700px */
+    }
+
+    .training__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 0.8125rem; /* 13px */
+        margin: 0 auto;
+    }
+
+    .heading_text {
+        order: 1;
+    }
+
+    .training_image {
+        order: 2;
+        /* Картинка сразу после заголовка */
+        margin-bottom: 1.25rem; /* 20px */
+        margin-top: 1.25rem; /* 20px */
+    }
+
+    .training_text {
+        order: 3;
+        width: 17.5rem; /* 280px */
+    }
+
+    .img_training {
+        width: 9.375rem; /* 150px */
+        height: 13.75rem; /* 220px */
+        border-radius: 2.1875rem; /* 35px */
+    }
+
+    .training_points li {
+        font-size: 0.5625rem; /* 9px */
+        margin-top: 0.9375rem; /* 15px */
+    }
+
+    .ending_text {
+        margin-top: 2.125rem; /* 34px */
+    }
+
+    .ending {
+        font-size: 0.75rem; /* 12px */
+    }
+}
   
   /* Intensives Section */
   .intensives {
