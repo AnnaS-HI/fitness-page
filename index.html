@@ -7,6 +7,60 @@
     <link rel="stylesheet" href="./assets/styles/main.css" />
   </head>
   <body>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero__container">
+        <!-- Меню -->
+        <div class="hero__menu">
+          <button
+            class="hero__menu-button"
+            id="menu-toggle"
+            aria-label="Открыть меню"
+            title="Открыть меню"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <!-- Левая часть -->
+        <div class="hero__left">
+          <div class="hero__icon">
+            <img src="./assets/images/heartinhand.png" alt="Иконка" />
+          </div>
+          <h1 class="hero__title">Наталья Матвеева</h1>
+          <h2 class="hero__subtitle">Женский фитнес-тренер</h2>
+          <p class="hero__description">
+            Через движение к сильному и здоровому телу
+          </p>
+          <button class="hero__button">Узнать подробнее</button>
+        </div>
+
+        <!-- Правая часть -->
+        <div class="hero__right">
+          <video class="hero__video" autoplay loop muted>
+            <source src="./assets/videos/hero_video.MOV" type="video/mp4" />
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
+      </div>
+
+      <!-- Полупрозрачное меню -->
+      <nav class="hero__nav" id="nav-menu">
+        <ul class="hero__nav-list">
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#training">Тренировки</a></li>
+          <li><a href="#intensives">Интенсивы</a></li>
+          <li><a href="#advantages">Преимущества</a></li>
+          <li><a href="#path">Мой путь</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#blog">Блог</a></li>
+          <li><a href="#footer">Контакты</a></li>
+        </ul>
+      </nav>
+    </section>
+
     <!-- About Section -->
     <section class="about" id="about">
       <div class="about__header">
@@ -89,13 +143,26 @@
       <div class="path__content">
         <h1 class="path__title">Вам стоит попробовать мои тренировки, если:</h1>
         <ul class="path__list">
-          <li class="path__item">Вы имеете выпирающий живот, хотя роды были давно</li>
-          <li class="path__item">Вы качаете пресс, но живот так и не становится плоским</li>
-          <li class="path__item">Вы хотите уменьшить диастаз и избавиться от «домика» в упражнениях на пресс</li>
+          <li class="path__item">
+            Вы имеете выпирающий живот, хотя роды были давно
+          </li>
+          <li class="path__item">
+            Вы качаете пресс, но живот так и не становится плоским
+          </li>
+          <li class="path__item">
+            Вы хотите уменьшить диастаз и избавиться от «домика» в упражнениях
+            на пресс
+          </li>
           <li class="path__item">У вас есть изменения в осанке</li>
-          <li class="path__item">Вы периодически чувствуете боль в пояснице и области крестца</li>
-          <li class="path__item">Вы страдаете от недержания мочи при кашле, чихании или беге</li>
-          <li class="path__item">Вы никогда не занимались и хотите наконец начать!</li>
+          <li class="path__item">
+            Вы периодически чувствуете боль в пояснице и области крестца
+          </li>
+          <li class="path__item">
+            Вы страдаете от недержания мочи при кашле, чихании или беге
+          </li>
+          <li class="path__item">
+            Вы никогда не занимались и хотите наконец начать!
+          </li>
         </ul>
       </div>
     </section>
