@@ -61,6 +61,13 @@ $color-border: #e6e6e6;
 $transition-fast: 0.3s ease;
 $radius-small: 10px;
 $radius-large: 15px;
+$font-size-title: 1.75rem; /* 28px */
+$font-size-subtitle: 1.625rem; /* 26px */
+$font-size-description: 1.5625rem; /* 25px */
+$font-size-button: 1.0625rem; /* 16px */
+$button-width: 17rem; /* 286px */
+$button-height: 4rem; /* 68px */
+$button-radius: 1.0625rem; /* 17px */
 
 body {
   margin: 0;
@@ -68,68 +75,64 @@ body {
   line-height: 1.6;
 }
 
-
 /* Hero Section */
 .hero {
-  background-color: #c5b1aa; /* Цвет фона */
+  background-color: $color-popup-bg;
   height: 41.563rem; /* 665px */
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: stretch;
-  padding: 0 20px;
-  max-width: 1240px;
+  padding: 0 1.25rem; /* 20px */
+  max-width: 85.375rem; /* 1366px */
   margin: 0 auto;
   position: relative;
 }
 
 .hero__container {
- /* max-width: 75rem; /* 1200px */
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem; /* Расстояние между колонками */
+  gap: 1rem;
 }
 
 .hero__left {
   flex: 1;
-  height: 100%; /* Растягиваем по высоте */
-  width: 100%; /* Добавляем растяжение по ширине */
+  height: 100%; 
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Центрирование содержимого */
-  align-items: center; /* Центрирование по горизонтали */
+  justify-content: flex-start;
+  align-items: center;
   text-align: center;
   padding: 0;
-  margin: 0;
-  top: 1;
 }
 
 .hero__icon {
-  width: 4.875rem; /* 78px */
-  height: 4.875rem; /* 78px */
-  margin-bottom: 2.0625rem; /* 33px */
+  width: 4.875rem; 
+  height: 4.875rem; 
+  margin-bottom: 2.0625rem; 
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Скрыть выходящее за рамки */
-  position: relative; /* Для управления дочерними элементами */
-  margin-top: 1.25rem; /* 20px */
+  overflow: hidden; 
+  position: relative; 
+  margin-top: 1.25rem; 
 }
 
 .hero__icon img {
-  width: 400%; /* Увеличиваем размер */
-  height: 400%; /* Увеличиваем размер */
-  position: absolute; /* Абсолютное позиционирование */
-  top: 50%; /* Центрируем по вертикали */
-  left: 50%; /* Центрируем по горизонтали */
-  transform: translate(-50%, -50%); /* Центрирование с учётом увеличения */
+  width: 400%; 
+  height: 400%; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
 }
 
 .hero__title {
   font-family: $font-primary;
-  font-size: 1.75rem; /* 28px */
-  font-weight: 10;
+  font-size: $font-size-title;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
   margin-bottom: 0.4rem; 
@@ -138,37 +141,43 @@ body {
 
 .hero__subtitle {
   font-family: $font-secondary;
-  font-size: 1.625rem; /* 26px */
-  margin-bottom: 2.0625rem; 
+  font-size: $font-size-subtitle;
+  font-weight: 500;
+  margin-bottom: 2.0625rem;
   letter-spacing: 0.4rem;
   color: #ffffff;
-  
 }
 
 .hero__description {
   font-family: $font-secondary;
-  font-size: 1.5625rem; /* 25px */
-  margin-bottom: 1.5rem; 
+  font-size: $font-size-description;
+  margin-bottom: 2.8rem;
   color: #ffffff;
-  padding: 0 10rem; /* 20px слева и справа */
+  padding: 0 9rem; 
   line-height: 1.2;
 }
 
 .hero__button {
   display: inline-block;
+  width: $button-width;
+  height: $button-height;
   background-color: #ffffff;
-  color:  $color-bg-dark;
-  font-family: 'Cardo', sans-serif;
-  font-size: 0.9375rem; /* 15px */
-  padding: 0.5rem 1.5rem;
-  border-radius: $radius-large;
+  color: $color-bg-dark;
+  font-family: $font-primary;
+  font-size: $font-size-button;
+  border-radius: $button-radius;
   border: none;
   cursor: pointer;
-  transition: background-color $transition-fast;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.0625rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .hero__button:hover {
   background-color: lighten(#ffffff, 10%);
+  transform: scale(1.05); /* Увеличиваем кнопку */
 }
 
 .hero__right {
@@ -196,7 +205,7 @@ body {
 .hero__menu-button {
   position: absolute; /* Закрепляем кнопку */
   top: 1rem; /* Отступ сверху */
-  left: 0;  /* Отступ слева */
+  left: 1rem;  /* Отступ слева */
   width: 2.5rem; /* Ширина кнопки */
   height: 2rem; /* Высота кнопки */
   display: flex;
@@ -206,14 +215,13 @@ body {
   border: none;
   cursor: pointer;
   z-index: 1000; /* Поверх остальных элементов */
-  /*border: 1px solid red;*/
 }
 
 .hero__menu-button span {
   display: block;
   width: 2rem; /* Длина полоски */
   height: 0.25rem; /* Толщина полоски */
-  background-color: $color-border; /* Цвет полоски */
+  background-color:  #ffffff; /* Цвет полоски */
   border-radius: 0.125rem; /* Скругление концов */
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -239,12 +247,9 @@ body {
 }
 
 .hero__nav.active {
- /* left: 0rem; /* Показываем меню */
- /* z-index: 1000; /* Устанавливаем выше остальных элементов */
- transform: translateX(0); /* Показать меню */
- visibility: visible; 
+  transform: translateX(0); /* Показать меню */
+  visibility: visible; 
 }
-
 
 .hero__menu-button.active span:nth-child(1) {
   transform: translateY(0.75rem) rotate(45deg);
@@ -257,7 +262,6 @@ body {
 .hero__menu-button.active span:nth-child(3) {
   transform: translateY(-0.75rem) rotate(-45deg);
 }
-
 
 .hero__nav-list {
   list-style: none;
@@ -304,22 +308,64 @@ body.menu-open {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    padding: 2rem 1rem; 
+  }
+
   .hero__container {
-    flex-direction: column; /* Элементы отображаются вертикально */
-    gap: 2rem; /* Расстояние между элементами */
+    height: 100%; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    text-align: center; 
   }
 
-  .hero__left, .hero__right {
-    flex: unset; /* Снимаем равное распределение */
-    width: 100%; /* Колонки занимают всю ширину */
+  .hero__left {
+    width: 100%;
+    margin: 0 auto;
   }
 
-  .hero__video {
-    width: 100%; /* Видео адаптируется по ширине экрана */
-    height: auto; /* Высота автоматически подстраивается */
+  .hero__icon {
+    width: 6.25rem; 
+    height: 6.25rem; 
+    margin-bottom: 2.0625rem; 
+  }
+
+  .hero__title {
+    font-size: 0.8125rem; 
+    margin-bottom: 2.0625rem;  
+  }
+
+  .hero__subtitle {
+    font-size: 0.75rem; 
+    margin-bottom: 2.0625rem;
+  }
+
+  .hero__description {
+    font-size: 0.6875rem; 
+    margin-bottom: 2.0625rem;  
+    line-height: 1.5; 
+    padding: 0 3rem; 
+  }
+
+  .hero__button {
+    width: 8.125rem; 
+    height: 1.875rem; 
+    font-size: 0.6875rem; 
+    border-radius: 1rem;
+    margin: 0 auto; 
+    text-align: center;
+    padding: 0;
+  }
+
+  .hero__right {
+    display: none; /* Скрываем правую часть */
   }
 }
-
 
 /* About Section */
 .about {
