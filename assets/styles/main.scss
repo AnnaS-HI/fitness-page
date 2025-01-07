@@ -74,13 +74,16 @@ body {
   background-color: #c5b1aa; /* Цвет фона */
   height: 41.563rem; /* 665px */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
+  justify-content:space-between;
+  align-items: stretch;
+  padding: 0 20px;
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .hero__container {
-  max-width: 75rem; /* 1200px */
+ /* max-width: 75rem; /* 1200px */
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -90,38 +93,65 @@ body {
 
 .hero__left {
   flex: 1;
-  text-align: left;
-  color: #ffffff;
+  height: 100%; /* Растягиваем по высоте */
+  width: 100%; /* Добавляем растяжение по ширине */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Центрирование содержимого */
+  align-items: center; /* Центрирование по горизонтали */
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  top: 1;
 }
 
 .hero__icon {
   width: 4.875rem; /* 78px */
   height: 4.875rem; /* 78px */
-  margin-bottom: 2rem; /* 33px */
+  margin-bottom: 2.0625rem; /* 33px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Скрыть выходящее за рамки */
+  position: relative; /* Для управления дочерними элементами */
+  margin-top: 1.25rem; /* 20px */
 }
 
 .hero__icon img {
-  width: 100%;
-  height: 100%;
+  width: 400%; /* Увеличиваем размер */
+  height: 400%; /* Увеличиваем размер */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 50%; /* Центрируем по вертикали */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translate(-50%, -50%); /* Центрирование с учётом увеличения */
 }
 
 .hero__title {
   font-family: $font-primary;
   font-size: 1.75rem; /* 28px */
+  font-weight: 10;
   text-transform: uppercase;
-  margin-bottom: 1rem; color: #ffffff;
+  letter-spacing: 0.4rem;
+  margin-bottom: 0.4rem; 
+  color: #ffffff;
 }
 
 .hero__subtitle {
-  font-family: 'Raleway', sans-serif;
+  font-family: $font-secondary;
   font-size: 1.625rem; /* 26px */
-  margin-bottom: 1rem; color: #ffffff;
+  margin-bottom: 2.0625rem; 
+  letter-spacing: 0.4rem;
+  color: #ffffff;
+  
 }
 
 .hero__description {
-  font-family: 'Cardo', sans-serif;
-  font-size: 1rem; /* 16px */
-  margin-bottom: 1.5rem; color: #ffffff;
+  font-family: $font-secondary;
+  font-size: 1.5625rem; /* 25px */
+  margin-bottom: 1.5rem; 
+  color: #ffffff;
+  padding: 0 10rem; /* 20px слева и справа */
+  line-height: 1.2;
 }
 
 .hero__button {
@@ -150,6 +180,8 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #c5b1aa; 
+  padding: 0; 
+  margin: 0; 
 }
 
 .hero__video {
@@ -157,13 +189,14 @@ body {
   height: 100%; /* Заполняет весь контейнер */
   object-fit: cover; /* Обрезка видео для заполнения контейнера */
   max-height: 41.563rem; /* 665px — ограничение высоты */
+  border: none;
 }
 
 /* Меню-кнопка (гамбургер) */
 .hero__menu-button {
-  position: fixed; /* Закрепляем кнопку */
+  position: absolute; /* Закрепляем кнопку */
   top: 1rem; /* Отступ сверху */
-  left: 1rem; /* Отступ слева */
+  left: 0;  /* Отступ слева */
   width: 2.5rem; /* Ширина кнопки */
   height: 2rem; /* Высота кнопки */
   display: flex;
@@ -187,26 +220,31 @@ body {
 
 /* Скрытое меню */
 .hero__nav {
-  position: fixed;
-  top: 0;
-  left: 0; /* Скрыто за пределами экрана */
-  width: 30%; /* Меню занимает 70% ширины экрана */
-  height: 50%;
+  position: absolute;
+  top: 0rem;
+  left: 0; /* Скрываем меню за экран */
+  width: 30%; /* Меню занимает 30% ширины экрана */
+  height: 100%; /* Меню на всю высоту экрана */
   background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
-  z-index: -9999999;
+  z-index: 999; /* Достаточный уровень для отображения над остальным контентом */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 2rem;
   transition: left 0.3s ease; /* Анимация появления */
+  transform: translateX(-100%); /* Изначально скрыто за левым краем */
+  transition: transform 0.3s ease; /* Анимация выезда */
+  visibility: hidden; 
 }
 
 .hero__nav.active {
-  left: 10; /* Показываем меню */
-  z-index: 9999999;
-  transition: z-index 0s, left 0.3s ease;
+ /* left: 0rem; /* Показываем меню */
+ /* z-index: 1000; /* Устанавливаем выше остальных элементов */
+ transform: translateX(0); /* Показать меню */
+ visibility: visible; 
 }
+
 
 .hero__menu-button.active span:nth-child(1) {
   transform: translateY(0.75rem) rotate(45deg);
