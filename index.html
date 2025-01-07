@@ -64,10 +64,263 @@
     </section>
 
     <!-- Footer Section -->
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Footer</title>
+
+    <!-- styles -->
+    <style>
+      @font-face {
+        font-family: "Raleway";
+        src: url("./fonts/Raleway-VariableFont_wght.ttf");
+      }
+
+      @font-face {
+        font-family: "Cardo";
+        src: url("./fonts/Cardo-Bold.ttf");
+      }
+
+      .nav {
+        font-family: "Raleway", sans-serif;
+        justify-content: center;
+        font-size: 36px; 
+        padding: 50px 0 50px 125px;
+        background-color: #c5b1aa;
+        color: white;
+      }
+
+      .footer {
+        height: 550px;
+        display: flex;
+        justify-content: space-around;
+        gap: 62px;
+        padding: 20px;
+        background-color: #c5b1aa;
+        flex-wrap: wrap;
+        color: white;
+        height: auto; 
+      }
+
+      .footer-column ul {
+        list-style-type: none;
+        line-height: 42px;
+        padding: 0;
+      }
+
+      .footer-column a {
+        color: white;
+        font-family: "Raleway", uppercase;
+        font-size: 14px;
+      }
+      
+      .social {
+        display: flex;
+        gap: 18px;
+        margin-bottom: 30px;
+      }
+
+      .contact_me{
+        margin-bottom: 100px;
+      }
+
+      .container_1 {
+        flex-direction: column;
+        display: flex;
+        gap: 16px;
+      }
+
+      .container_2 {
+        flex-direction: column;
+        display: flex;
+        gap: 16px;
+      }
+
+      .container_3 ul{
+        flex-direction: column;
+        display: flex;
+        gap: 16px; 
+        margin-top: 90px;
+      }
+
+      .contact_footer {
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+        font-family: "Cardo";
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+/* meadia */
+      @media screen and (max-width: 400px) {
+        .nav {
+          font-size: 24px;
+          text-align: center;
+          padding: 16px;
+        }
+
+        .footer-column li {
+        margin: 16px 0; 
+        /* margin-top: 20px; */
+        }
+
+        .container_1 {
+        flex-direction: column;
+        display: block;
+        gap: 16px;
+        }
+
+        .social {
+        display: block;
+        gap: 10px;
+        }
+
+        .footer {
+          flex-direction: column;
+          align-items: center;
+          gap: 16px;
+          height: auto;
+          padding: 10px;
+        }
+
+        .footer-column ul {
+        gap: 16px;
+        padding: 0;
+        margin-top: -30px;
+        }
+
+        .footer-column a {
+          line-height: 16px;
+          
+          
+          display: block;
+          padding: 5px 0;
+          justify-content: center;
+          background-color: #c5b1aa;
+          min-width: 100%;
+          font-size: 12px;
+          text-align: center;
+        }
+
+        .contact_me,
+        .about_me,
+        .blog,
+        .icons {
+        margin: 16px 0; 
+        }
+    
+        .social {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 20px;
+        }
+
+        .social img {
+          width: 51px; 
+          height: 51px;
+        }
+        
+        .container_1 {
+        gap: 16px; 
+        margin-top: 0;
+        padding: 0px;
+        }
+
+        .container_3 ul {
+        gap: 16px; 
+        margin-top: 0;
+        }
+      }
+    </style>
+  </head>
+
+<!-- html -->
+  <body>
+    <nav class="nav">КОНТАКТЫ</nav>
     <footer class="footer">
-      <div class="footer__content">
-        <!-- код -->
+      <div class="footer-column">
+        <ul>
+          <li class="contact_me">
+            <a href="https://t.me/ns_matveeva" target="_blank"
+              >СВЯЗАТЬСЯ СО МНОЙ</a
+            >
+          </li>
+          <div class="container_1">
+            <li class="about_me">
+              <a href="#about">ОБО МНЕ</a>
+              <li class="blog">
+                <a href="#blog">БЛОГ</a>
+              </li>
+              
+            </li>
+          </div> 
+        </ul>
       </div>
+
+      <div class="footer-column">
+        <ul>
+          <li class="icons">
+            <a href="#social">СОЦСЕТИ</a>
+            <div class="group_social">
+              <div class="social">
+                <a href="https://instagram.com/ns_matveeva" target="_blank">
+                  <img
+                    class="social_inst"
+                    src="./img/icons8-instagram-50.png"
+                    alt="inst"
+                  />
+                </a>
+                <a href="https://t.me/ns_matveeva" target="_blank">
+                  <img
+                    class="social_tg"
+                    src="./img/icons8-telegram-50.png"
+                    alt="tg"
+                  />
+                </a>
+                <a href="https://vk.com/matveeva_insideout" target="_blank">
+                  <img
+                    class="social_vk"
+                    src="./img/icons8-vk-50.png"
+                    alt="vk"
+                  />
+                </a>
+              </div>
+            </div>
+          </li>
+          <div class="container_2">
+            <div class="block_intensives">
+              <a href="#intensives">ИНТЕНСИВЫ</a>
+            </div>
+            <div class="reviews">
+              <a href="#reviews">ОТЗЫВЫ</a>
+            </div>
+          </div>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <div class="legacy">
+          <ul>
+            <li class="legacy"><a href="#legal">ЮРИДИЧЕСКАЯ ИНФОРМАЦИЯ</a></li>
+          </ul>
+        </div>
+
+        <div class="container_3">
+          <ul>
+            <li class="personal_trainings">
+              <a href="#personal-trainings">ПЕРСОНАЛЬНЫЕ ТРЕНИРОВКИ</a>
+            </li>
+            <li class="benefits"><a href="#benefits">ПРЕИМУЩЕСТВА</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contact_footer">Все права защищены (с)</div>
     </footer>
   </body>
 </html>
+
