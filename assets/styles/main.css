@@ -45,7 +45,7 @@
 /* 68px */
 /* 17px */
 /* 40px */
-/* 1200px */
+/* 1366px */
 /* 41px */
 /* 10px */
 body {
@@ -55,6 +55,23 @@ body {
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 85.375rem; /* 1366px */
+  margin: 0 auto; /* Центрирование */
+  padding: 0 1rem; /* Отступы внутри */
+  box-sizing: border-box; /* Учитываем отступы */
+}
+
+@media (max-width: 1366px) {
+  .container {
+    max-width: 90%; /* Адаптивная ширина */
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem; /* Уменьшаем внутренние отступы */
+  }
+}
 .overlay {
   position: fixed;
   top: 0;
@@ -68,12 +85,6 @@ body {
 
 .hidden {
   display: none;
-}
-
-.container {
-  max-width: 75rem;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
 
 /* Стили всплывающего окна */
@@ -307,7 +318,7 @@ body {
 
 .hero__right {
   flex: 1;
-  width: 100%; /* Делаем блок с видео на всю ширину */
+  width: 100%;
   height: auto;
   overflow: hidden;
   display: flex;
@@ -319,36 +330,36 @@ body {
 }
 
 .hero__video {
-  width: 100%; /* Занимает всю ширину контейнера */
-  height: 100%; /* Заполняет весь контейнер */
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
-     object-fit: cover; /* Обрезка видео для заполнения контейнера */
-  max-height: 41.563rem; /* 665px — ограничение высоты */
+     object-fit: cover;
+  max-height: 41.563rem;
   border: none;
 }
 
 /* Меню-кнопка (гамбургер) */
 .hero__menu-button {
-  position: absolute; /* Закрепляем кнопку */
-  top: 1rem; /* Отступ сверху */
-  left: 1rem; /* Отступ слева */
-  width: 2.5rem; /* Ширина кнопки */
-  height: 2rem; /* Высота кнопки */
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 2.5rem;
+  height: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1000; /* Поверх остальных элементов */
+  z-index: 1000;
 }
 
 .hero__menu-button span {
   display: block;
-  width: 2rem; /* Длина полоски */
-  height: 0.25rem; /* Толщина полоски */
-  background-color: #ffffff; /* Цвет полоски */
-  border-radius: 0.125rem; /* Скругление концов */
+  width: 2rem;
+  height: 0.25rem;
+  background-color: #ffffff;
+  border-radius: 0.125rem;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -373,7 +384,7 @@ body {
 }
 
 .hero__nav.active {
-  transform: translateX(0); /* Показать меню */
+  transform: translateX(0);
   visibility: visible;
 }
 
@@ -396,14 +407,14 @@ body {
 }
 
 .hero__nav-list li {
-  margin-bottom: 1rem; /* Отступ между пунктами */
+  margin-bottom: 1rem;
 }
 
 .hero__nav-list a {
   color: #f9f9f9;
   text-decoration: none;
   font-family: "Cardo", Arial, sans-serif;
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.25rem;
   transition: color 0.3s ease;
 }
 
@@ -411,7 +422,6 @@ body {
   color: white;
 }
 
-/* Скрытие скролла страницы, когда меню активно */
 body.menu-open {
   overflow: hidden;
 }
@@ -478,7 +488,7 @@ body.menu-open {
     padding: 0;
   }
   .hero__right {
-    display: none; /* Скрываем правую часть */
+    display: none;
   }
 }
 /* About Section */
@@ -490,7 +500,7 @@ body.menu-open {
   background-color: #e6e6e6;
   padding: 2.5rem;
   align-items: start;
-  max-width: 75rem;
+  max-width: 85.375rem;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -699,28 +709,28 @@ body.menu-open {
 }
 /* Training Section */
 .training {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
   background-color: #e6e6e6;
-  height: 900px;
+  height: 56.25rem;
   width: 100%;
 }
 
 .training__content {
-  max-width: 1200px;
+  max-width: 85.375rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 100px;
+  grid-column-gap: 6.25rem;
 }
 
 .heading_text {
   grid-column: 1/2;
-  bottom: 62px;
+  bottom: 3.875rem;
   justify-items: start;
 }
 
 .training_text {
-  height: 680px;
+  height: 42.5rem;
   grid-column: 1/2;
 }
 
@@ -729,39 +739,39 @@ body.menu-open {
 }
 
 .img_training {
-  width: 525px;
-  height: 680px;
-  border-radius: 35px;
+  width: 32.8125rem;
+  height: 42.5rem;
+  border-radius: 2.1875rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .heading {
-  font-size: 36px;
+  font-size: 2.25rem;
   color: #818b7e;
   display: block;
-  margin-bottom: 62px;
+  margin-bottom: 3.875rem;
   font-family: Raleway;
 }
 
 .training_points li {
-  font-size: 21px;
+  font-size: 1.3125rem;
   color: #818b7e;
-  margin-top: 35px;
+  margin-top: 2.1875rem;
   text-align: justify;
 }
 
 .ending {
   color: #818b7e;
-  font: bold 24px Raleway;
-  margin-top: 62px;
+  font: bold 1.5rem Raleway;
+  margin-top: 3.875rem;
   display: block;
   text-align: center;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 25rem) {
   .training {
-    height: 700px;
+    height: 43.75rem;
   }
   .training__content {
     display: flex;
@@ -770,7 +780,7 @@ body.menu-open {
   }
   .heading {
     text-align: center;
-    font-size: 13px;
+    font-size: 0.8125rem;
     margin: 0 auto;
   }
   .heading_text {
@@ -778,41 +788,38 @@ body.menu-open {
   }
   .training_image {
     order: 2;
-    /* Картинка сразу после заголовка */
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
   }
   .training_text {
     order: 3;
-    width: 280px;
+    width: 17.5rem;
   }
   .img_training {
-    width: 150px;
-    height: 220px;
-    border-radius: 35px;
+    width: 9.375rem;
+    height: 13.75rem;
+    border-radius: 2.1875rem;
   }
   .training_points li {
-    font-size: 9px;
-    margin-top: 15px;
+    font-size: 0.5625rem;
+    margin-top: 0.9375rem;
   }
   .ending_text {
-    margin-top: 34px;
+    margin-top: 2.125rem;
   }
   .ending {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 /* Intensives Section */
 .intensives {
   background-color: #ffffff;
   padding: 3.125rem 1.25rem;
-  /* 50px 20px */
   text-align: center;
 }
 
 .intensives__container {
   max-width: 75rem;
-  /* 1260px */
   margin: 0 auto;
   padding: 0 1.25rem;
   box-sizing: border-box;
@@ -821,10 +828,8 @@ body.menu-open {
 .intensives__title {
   font-family: "Raleway", serif;
   font-size: 2.25rem;
-  /* 36px */
   color: #cda498;
   margin-bottom: 7.5rem;
-  /* 120px */
 }
 
 /* Сетка карточек */
@@ -832,7 +837,6 @@ body.menu-open {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.625rem;
-  /* 42px */
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -888,7 +892,6 @@ body.menu-open {
 .intensives__name {
   font-family: "Raleway", serif;
   font-size: 1.5rem;
-  /* 24px */
   color: #cda498;
   text-align: center;
   line-height: 1.4;
@@ -903,14 +906,11 @@ body.menu-open {
 .intensives__button {
   display: inline-block;
   width: 16.125rem;
-  /* 258px */
   height: 4.25rem;
-  /* 68px */
   border-radius: 15px;
   background-color: #cda498;
   font-family: "Cardo", Arial, sans-serif;
   font-size: 0.9375rem;
-  /* 15px */
   color: #2e2e2f;
   border: none;
   cursor: pointer;
@@ -928,11 +928,8 @@ body.menu-open {
 @media (min-width: 1025px) {
   .intensives__container {
     max-width: 75rem;
-    /* 1200px */
     padding: 0 1.25rem;
-    /* Боковые отступы */
   }
-  /* Для больших экранов: 3 карточки в ряду */
   .intensives__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -943,15 +940,12 @@ body.menu-open {
 @media (max-width: 1024px) and (min-width: 769px) {
   .intensives__container {
     max-width: 90%;
-    /* Уменьшаем ширину контейнера */
     padding: 0 1rem;
-    /* Боковые отступы */
   }
   .intensives__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
-    /* 48px */
     justify-content: center;
   }
   .popup::before {
@@ -966,9 +960,7 @@ body.menu-open {
 @media (max-width: 768px) {
   .intensives__container {
     max-width: 100%;
-    /* Контейнер занимает всю ширину экрана */
     padding: 0 0.5rem;
-    /* Уменьшенные боковые отступы */
   }
   .intensives__cards {
     grid-template-columns: 1fr;
@@ -991,40 +983,33 @@ body.menu-open {
   }
   .popup-title {
     font-size: 1rem;
-    /* 16px */
   }
   .popup-description {
     font-size: 0.8125rem;
-    /* 13px */
   }
   .popup__list li {
     font-size: 0.8125rem;
-    /* 13px */
   }
 }
 /* Advantages Section */
 .advantages {
   padding: 2.5rem 1.25rem;
-  /* 40px 20px */
   background-color: #f2f2f2;
 }
 
 .advantages__content {
   max-width: 75rem;
-  /* 1200px */
   margin: 0 auto;
 }
 
 /* Reviews Section */
 .reviews {
   padding: 2.5rem 1.25rem;
-  /* 40px 20px */
   background-color: #eaeaea;
 }
 
 .reviews__content {
   max-width: 75rem;
-  /* 1200px */
   margin: 0 auto;
 }
 
@@ -1035,14 +1020,12 @@ body.menu-open {
   justify-content: center;
   background-color: #ffffff;
   padding: 2.5rem 1.25rem;
-  /* 40px 20px */
 }
 
 .base__link {
   color: #333333;
   font-family: "Cardo", Arial, sans-serif;
   font-weight: 1rem;
-  /* 16px */
   text-decoration: none;
 }
 
@@ -1053,7 +1036,6 @@ body.menu-open {
 .base__box {
   background-color: white;
   padding: 2.5rem;
-  /* 40px */
 }
 
 .base__title {
@@ -1061,14 +1043,12 @@ body.menu-open {
   color: #818b7e;
   font-size: 2.1875rem;
   text-align: center;
-  /* 35px */
 }
 
 .base__subtitle {
   font-family: "Raleway", serif;
   color: #818b7e;
   font-size: 1.3125rem;
-  /* 21px */
   font-weight: bold;
   text-align: center;
 }
@@ -1077,10 +1057,8 @@ body.menu-open {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 13.125rem;
-  /* 210px */
   justify-items: center;
   margin-top: 4.4375rem;
-  /* 71px */
 }
 
 .base__img {
@@ -1094,7 +1072,6 @@ body.menu-open {
   align-items: center;
   justify-content: space-between;
   gap: 3.75rem;
-  /* 60px */
 }
 
 .base__btn {
@@ -1103,13 +1080,10 @@ body.menu-open {
   background-color: #818b7e;
   font-family: "Raleway", serif;
   font-size: 1rem;
-  /* 16px */
   font-weight: bold;
   color: #f9f9f9;
   width: 11.5625rem;
-  /* 185px */
   height: 3rem;
-  /* 48px */
   border: transparent;
   border-radius: 10px;
   cursor: pointer;
@@ -1136,13 +1110,10 @@ body.menu-open {
 .modal__close {
   position: absolute;
   top: 0.625rem;
-  /* 10px */
   right: 0.625rem;
-  /* 10px */
   cursor: pointer;
   font-family: "Raleway", serif;
   font-size: 1.875rem;
-  /* 30px */
   border: none;
   color: #f9f9f9;
   background: transparent;
@@ -1156,9 +1127,7 @@ body.menu-open {
   height: auto;
   background: #c5b1aa;
   padding: 1.25rem;
-  /* 20px */
   border-radius: 2.5rem;
-  /* 40px */
   margin: auto;
 }
 
@@ -1171,35 +1140,29 @@ body.menu-open {
 .modal__descr {
   font-family: "Cardo", Arial, sans-serif;
   font-size: 0.875rem;
-  /* 14px */
   color: #f9f9f9;
 }
 
 .base__span {
   font-family: "Raleway", serif;
   font-size: 0.875rem;
-  /* 14px */
   color: #f9f9f9;
 }
 
 .slogan {
   font-family: "Raleway", serif;
   font-size: 1.875rem;
-  /* 30px */
   font-weight: 500;
   color: #cda498;
   margin-top: 11.1875rem;
-  /* 179px */
   text-align: center;
   padding: 1.25rem;
-  /* 20px */
 }
 
 /* Медиазапросы */
 @media (max-width: 1024px) and (min-width: 769px) {
   .base__cards {
     gap: 1.5625rem;
-    /* 25px */
   }
   .base__img {
     max-width: 200px;
@@ -1209,30 +1172,23 @@ body.menu-open {
 @media (max-width: 768px) {
   .base {
     padding: 1.25rem;
-    /* 20px */
   }
   .base__box {
     padding: 0.9375rem;
-    /* 15px */
   }
   .base__title {
     font-size: 0.875rem;
-    /* 14px */
   }
   .base__subtitle {
     font-size: 0.875rem;
-    /* 14px */
   }
   .base__cards {
     grid-template-columns: 1fr;
     gap: 2.1875rem;
-    /* 35px */
     margin-top: 1.875rem;
-    /* 30px */
   }
   .base__card {
     gap: 1.25rem;
-    /* 20px */
   }
   .base__img {
     max-width: 115px;
@@ -1240,11 +1196,8 @@ body.menu-open {
   }
   .base__btn {
     width: 7.5rem;
-    /* 120px */
     height: 2.25rem;
-    /* 36px */
     font-size: 0.875rem;
-    /* 14px */
   }
   .modal__body1,
   .modal__body2,
@@ -1254,32 +1207,27 @@ body.menu-open {
     align-items: center;
     max-width: 200px;
     padding: 1.125rem;
-    /* 18px */
   }
   .modal__subtitle {
     font-size: 0.875rem;
-    /* 14px */
   }
   .modal__descr {
-    font-size: 0.6875rem; /* 12px */
+    font-size: 0.6875rem;
     text-align: center;
   }
   .modal__link {
-    font-size: 0.6875rem; /* 12px */
+    font-size: 0.6875rem;
   }
   .modal__span {
-    font-size: 0.6875rem; /* 12px */
-    margin-top: 0.5rem; /* 8px */
+    font-size: 0.6875rem;
+    margin-top: 0.5rem;
   }
   .modal__close {
     font-size: 1.875rem;
-    /* 30px */
   }
   .slogan {
     font-size: 0.75rem;
-    /* 12px */
     margin-top: 2rem;
-    /* 32px */
   }
 }
 /* Footer Section */
@@ -1287,15 +1235,15 @@ body.menu-open {
   background-color: #c5b1aa;
   color: white;
   padding: 0.625rem;
-  height: auto; /* Для адаптивности */
+  height: auto;
 }
 
 .nav {
   font-family: "Raleway", serif;
   justify-content: flex-start;
-  font-size: 2.25rem; /* 36px */
-  padding: 3.125rem 0 3.125rem 8%; /* Убираем фиксированный отступ */
-  margin: 0; /* Убираем лишние отступы */
+  font-size: 2.25rem;
+  padding: 3.125rem 0 3.125rem 8%;
+  margin: 0;
   text-align: left;
   color: white;
   font-weight: 510;
@@ -1305,7 +1253,7 @@ body.menu-open {
 .footer {
   display: flex;
   justify-content: space-around;
-  gap: 1.25rem; /* 20px */
+  gap: 1.25rem;
   padding: 0.625rem;
   background-color: #c5b1aa;
   flex-wrap: wrap;
@@ -1314,9 +1262,9 @@ body.menu-open {
 }
 
 .footer-column {
-  flex: 1 1 30%; /* Базовая ширина 30% */
-  min-width: 9.375rem; /* 150px */
-  max-width: 18.75rem; /* 300px */
+  flex: 1 1 30%;
+  min-width: 9.375rem;
+  max-width: 18.75rem;
 }
 
 .footer-column ul {
@@ -1327,99 +1275,98 @@ body.menu-open {
 }
 
 .footer-column li {
-  margin: 0.625rem 0; /* Отступы между элементами */
+  margin: 0.625rem 0;
 }
 
 .footer-column li:not(:first-child) {
-  margin-top: 2.5rem; /* 40px */
+  margin-top: 2.5rem;
 }
 
 .footer-column a {
   text-decoration: underline;
   color: white;
   font-family: "Raleway", serif;
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
   text-transform: uppercase;
   font-weight: 400;
 }
 
 .social {
   display: flex;
-  gap: 1.125rem; /* 18px */
+  gap: 1.125rem;
   margin-bottom: 0;
 }
 
 .footer-column ul > li.contact_me,
 .footer-column ul > li.info {
-  margin-bottom: 6.25rem; /* 100px */
+  margin-bottom: 6.25rem;
 }
 
 .footer-column ul > li.icons {
-  margin-bottom: 2.5rem; /* 40px */
+  margin-bottom: 2.5rem;
   margin-top: 0;
 }
 
 .contact_footer {
   width: 100%;
   text-align: center;
-  margin-top: 6.25rem; /* 100px */
+  margin-top: 6.25rem;
   font-family: "Cardo", Arial, sans-serif;
-  font-size: 0.875rem; /* 14px */
-  letter-spacing: 0.0625rem; /* 1px */
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
 }
 
 /* Media */
 @media screen and (max-width: 25rem) {
-  /* 400px */
   .nav {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.5rem;
     text-align: center;
-    padding: 1rem; /* 16px */
+    padding: 1rem;
   }
   .footer {
     flex-direction: column;
     align-items: center;
-    gap: 1rem; /* 16px */
+    gap: 1rem;
     height: auto;
-    padding: 0.625rem; /* 10px */
+    padding: 0.625rem;
   }
   .footer-column {
-    flex: 1 1 100%; /* Колонки занимают всю ширину */
+    flex: 1 1 100%;
     max-width: 100%;
   }
   .footer-column ul {
-    gap: 1rem; /* 16px */
+    gap: 1rem;
     padding: 0;
-    margin-top: -1.875rem; /* -30px */
+    margin-top: -1.875rem;
     text-align: center;
   }
   .footer-column a {
-    line-height: 1rem; /* 16px */
+    line-height: 1rem;
     display: block;
-    padding: 0.3125rem 0; /* 5px */
+    padding: 0.3125rem 0;
     justify-content: center;
-    font-size: 0.75rem; /* 12px */
+    font-size: 0.75rem;
     text-align: center;
   }
   .social {
     flex-direction: column;
     align-items: center;
-    gap: 0.625rem; /* 10px */
-    margin-bottom: 1.25rem; /* 20px */
+    gap: 0.625rem;
+    margin-bottom: 1.25rem;
   }
   .social img {
-    width: 2.5rem; /* 40px */
-    height: 2.5rem; /* 40px */
+    width: 2.5rem;
+    height: 2.5rem;
   }
   .contact_footer {
-    font-size: 0.75rem; /* 12px */
-    margin-top: 1.25rem; /* 20px */
+    font-size: 0.75rem;
+    margin-top: 1.25rem;
   }
   .footer-column ul > li.contact_me,
   .footer-column ul > li.info {
-    margin-bottom: 1.25rem; /* 20px */
+    margin-bottom: 1.25rem;
   }
   .footer-column ul > li.icons {
-    margin-bottom: 1.25rem; /* 20px */
+    margin-bottom: 1.25rem;
   }
 }/*# sourceMappingURL=main.css.map */
