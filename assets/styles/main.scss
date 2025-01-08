@@ -1,4 +1,4 @@
-/* General Styles */
+@import "../fonts/Raleway/stylesheet.css";
 
 @font-face {
   font-family: "Cardo";
@@ -20,30 +20,6 @@
   font-family: "Cardo";
   src: url("../fonts/Cardo/cardo-italic-webfont.woff2") format("woff2"),
     url("../fonts/Cardo/cardo-italic-webfont.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway/Raleway-Thin.woff2") format("woff2"),
-    url("../fonts/Raleway/Raleway-Thin.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway/Raleway-Bold.woff2") format("woff2"),
-    url("../fonts/Raleway/Raleway-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway/Raleway-ThinItalic.woff2") format("woff2"),
-    url("../fonts/Raleway/Raleway-ThinItalic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
 }
@@ -75,6 +51,10 @@ $button-radius: 1.0625rem; /* 17px */
 $section-padding: 2.5rem; /* 40px */
 $container-max-width: 85.375rem; /* 1366px */
 $gap-large: 2.5625rem; /* 41px */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -298,6 +278,7 @@ body {
   font-family: $font-primary;
   font-size: $font-size-title;
   font-weight: 700;
+  text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   letter-spacing: 0.4rem;
   margin-bottom: 0.4rem;
@@ -308,6 +289,7 @@ body {
   font-family: $font-secondary;
   font-size: $font-size-subtitle;
   font-weight: 500;
+
   margin-bottom: 2.0625rem;
   letter-spacing: 0.4rem;
   color: $color-white;
@@ -320,6 +302,7 @@ body {
   color: $color-white;
   padding: 0 9rem;
   line-height: 1.2;
+  font-weight: 400;
 }
 
 .hero__button {
@@ -338,6 +321,7 @@ body {
   align-items: center;
   margin-top: 2.0625rem;
   transition: transform $transition-fast, background-color $transition-fast;
+  text-decoration: none;
 }
 
 .hero__button:hover {
@@ -1105,7 +1089,7 @@ body.menu-open {
 }
 
 .base__box {
-  background-color: $color-section;
+  background-color: $color-white;
   padding: $section-padding;
 }
 

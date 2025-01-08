@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* General Styles */
+@import "../fonts/Raleway/stylesheet.css";
 @font-face {
   font-family: "Cardo";
   src: url("../fonts/Cardo/cardo-regular-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-regular-webfont.woff") format("woff");
@@ -18,25 +18,11 @@
   font-weight: 400;
   font-style: italic;
 }
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway/Raleway-Thin.woff2") format("woff2"), url("../fonts/Raleway/Raleway-Thin.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway/Raleway-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway/Raleway-ThinItalic.woff2") format("woff2"), url("../fonts/Raleway/Raleway-ThinItalic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
-}
 /* Переменные */
+/* 10px */
+/* 10px */
+/* 10px */
+/*15px; */
 /* 28px */
 /* 26px */
 /* 25px */
@@ -47,7 +33,10 @@
 /* 40px */
 /* 1366px */
 /* 41px */
-/* 10px */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Cardo", Arial, sans-serif;
@@ -91,7 +80,7 @@ body {
 .popup {
   position: absolute;
   background-color: #c5b1aa;
-  border-radius: 15px;
+  border-radius: 0.9375rem;
   box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
   padding: 1.25rem;
   z-index: 10;
@@ -204,7 +193,7 @@ body {
 
 .popup::-webkit-scrollbar-thumb {
   background-color: #cda498; /* Цвет полоски */
-  border-radius: 10px; /* Скругление */
+  border-radius: 0.625rem; /* Скругление */
 }
 
 .popup::-webkit-scrollbar-thumb:hover {
@@ -269,6 +258,7 @@ body {
   font-family: "Cardo", Arial, sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
+  text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   letter-spacing: 0.4rem;
   margin-bottom: 0.4rem;
@@ -291,6 +281,7 @@ body {
   color: #ffffff;
   padding: 0 9rem;
   line-height: 1.2;
+  font-weight: 400;
 }
 
 .hero__button {
@@ -300,7 +291,7 @@ body {
   background-color: #ffffff;
   color: #333333;
   font-family: "Cardo", Arial, sans-serif;
-  font-size: 1.0625rem;
+  font-size: 1rem;
   border-radius: 1.0625rem;
   border: none;
   cursor: pointer;
@@ -309,6 +300,7 @@ body {
   align-items: center;
   margin-top: 2.0625rem;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
 }
 
 .hero__button:hover {
@@ -606,7 +598,7 @@ body.menu-open {
     max-width: 9.375rem;
     height: 13.75rem;
     margin: 0.625rem 0;
-    border-radius: 10px;
+    border-radius: 0.625rem;
   }
   .about__content {
     width: 100%;
@@ -651,7 +643,7 @@ body.menu-open {
 .path__title {
   font-family: "Maharlika", sans-serif;
   font-size: 36px;
-  color: white;
+  color: #ffffff;
   margin-bottom: 106px;
 }
 
@@ -664,8 +656,8 @@ body.menu-open {
 
 .path__item {
   font-family: "Cardo", Arial, sans-serif;
-  font-size: 25px;
-  color: white;
+  font-size: 1.5625rem;
+  color: #ffffff;
   line-height: 45px;
   margin-bottom: 10px;
   position: relative;
@@ -691,7 +683,7 @@ body.menu-open {
     max-width: 90%;
   }
   .path__title {
-    font-size: 28px;
+    font-size: 1.75rem;
     margin-bottom: 40px;
   }
   .path__list {
@@ -847,7 +839,7 @@ body.menu-open {
   width: 24.375rem;
   height: 31.875rem;
   background-color: #f9f9f9;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   overflow: hidden;
   text-align: center;
   display: flex;
@@ -860,7 +852,7 @@ body.menu-open {
   width: 24.375rem;
   height: 16.875rem;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   position: relative;
 }
 
@@ -907,7 +899,7 @@ body.menu-open {
   display: inline-block;
   width: 16.125rem;
   height: 4.25rem;
-  border-radius: 15px;
+  border-radius: 0.9375rem;
   background-color: #cda498;
   font-family: "Cardo", Arial, sans-serif;
   font-size: 0.9375rem;
@@ -976,7 +968,7 @@ body.menu-open {
   .popup {
     width: 70%;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 0.625rem;
   }
   .popup::before {
     display: none;
@@ -1085,7 +1077,7 @@ body.menu-open {
   width: 11.5625rem;
   height: 3rem;
   border: transparent;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   cursor: pointer;
 }
 
@@ -1233,7 +1225,7 @@ body.menu-open {
 /* Footer Section */
 .footer-contact {
   background-color: #c5b1aa;
-  color: white;
+  color: #ffffff;
   padding: 0.625rem;
   height: auto;
 }
@@ -1245,7 +1237,7 @@ body.menu-open {
   padding: 3.125rem 0 3.125rem 8%;
   margin: 0;
   text-align: left;
-  color: white;
+  color: #ffffff;
   font-weight: 510;
   letter-spacing: 0.2rem;
 }
@@ -1257,7 +1249,7 @@ body.menu-open {
   padding: 0.625rem;
   background-color: #c5b1aa;
   flex-wrap: wrap;
-  color: white;
+  color: #ffffff;
   height: auto;
 }
 
@@ -1284,7 +1276,7 @@ body.menu-open {
 
 .footer-column a {
   text-decoration: underline;
-  color: white;
+  color: #ffffff;
   font-family: "Raleway", serif;
   font-size: 0.875rem;
   text-transform: uppercase;
