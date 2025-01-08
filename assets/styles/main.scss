@@ -753,14 +753,118 @@ body.menu-open {
 
 /* Training Section */
 .training {
-  padding: 2.5rem 1.25rem;
-  background-color: #f5f5f5;
+  padding: 40px 20px;
+  background-color: #e6e6e6;
+  height: 900px;
+  width: 100%;
 }
 
 .training__content {
-  max-width: 75rem;
-  /* 1200px */
+  max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 100px;
+}
+
+.heading_text {
+  grid-column: 1 / 2;
+  bottom: 62px;
+  justify-items: start;
+}
+
+.training_text {
+  height: 680px;
+  grid-column: 1 / 2;
+}
+
+.training_image {
+  grid-column: 2 / 3;
+}
+
+.img_training {
+  width: 525px;
+  height: 680px;
+  border-radius: 35px;
+  object-fit: cover;
+}
+
+.heading {
+  font-size: 36px;
+  color: #818b7e;
+  display: block;
+  margin-bottom: 62px;
+  font-family: Raleway;
+}
+
+.training_points li {
+  font-size: 21px;
+  color: #818b7e;
+  margin-top: 35px;
+  text-align: justify;
+}
+
+.ending {
+  color: #818b7e;
+  font: bold 24px Raleway;
+  margin-top: 62px;
+  display: block;
+  text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  .training {
+      height: 700px;
+  }
+
+  .training__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .heading {
+      text-align: center;
+      font-size: 13px;
+      margin: 0 auto;
+  }
+
+  .heading_text {
+      order: 1;
+  }
+
+  .training_image {
+      order: 2;
+      /* Картинка сразу после заголовка */
+      margin-bottom: 20px;
+      margin-top: 20px;
+  }
+
+  .training_text {
+      order: 3;
+      width: 280px;
+  }
+
+  .img_training {
+      width: 150px;
+      height: 220px;
+      border-radius: 35px;
+  }
+
+
+  .training_points li {
+      font-size: 9px;
+      margin-top: 15px;
+  }
+
+  .ending_text {
+      margin-top: 34px;
+  }
+
+  .ending {
+      font-size: 12px;
+  }
+
 }
 
 /* Intensives Section */
