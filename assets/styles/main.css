@@ -208,18 +208,18 @@ body {
 }
 
 .popup::-webkit-scrollbar-thumb:hover {
-  background-color: #474749; /* Более светлый цвет при наведении */
+  background-color: #474749;
 }
 
 /* Hero Section */
 .hero {
   background-color: #c5b1aa;
-  height: 41.563rem; /* 665px */
+  height: 41.563rem;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  padding: 0 1.25rem; /* 20px */
-  max-width: 85.375rem; /* 1366px */
+  padding: 0 1.25rem;
+  max-width: 85.375rem;
   margin: 0 auto;
   position: relative;
 }
@@ -643,7 +643,7 @@ body.menu-open {
 }
 
 .path__content {
-  max-width: 1200px;
+  max-width: 85.375rem;
   margin: 0 auto;
   padding-top: 50px;
 }
@@ -663,7 +663,7 @@ body.menu-open {
 }
 
 .path__item {
-  font-family: "Cardo", serif;
+  font-family: "Cardo", Arial, sans-serif;
   font-size: 25px;
   color: white;
   line-height: 45px;
@@ -751,7 +751,7 @@ body.menu-open {
   color: #818b7e;
   display: block;
   margin-bottom: 3.875rem;
-  font-family: Raleway;
+  font-family: "Raleway", serif;
 }
 
 .training_points li {
@@ -763,7 +763,7 @@ body.menu-open {
 
 .ending {
   color: #818b7e;
-  font: bold 1.5rem Raleway;
+  font: bold 1.5rem "Raleway", serif;
   margin-top: 3.875rem;
   display: block;
   text-align: center;
@@ -819,7 +819,7 @@ body.menu-open {
 }
 
 .intensives__container {
-  max-width: 75rem;
+  max-width: 85.375rem;
   margin: 0 auto;
   padding: 0 1.25rem;
   box-sizing: border-box;
@@ -927,7 +927,7 @@ body.menu-open {
 /* Медиазапросы */
 @media (min-width: 1025px) {
   .intensives__container {
-    max-width: 75rem;
+    max-width: 85.375rem;
     padding: 0 1.25rem;
   }
   .intensives__cards {
@@ -998,7 +998,7 @@ body.menu-open {
 }
 
 .advantages__content {
-  max-width: 75rem;
+  max-width: 85.375rem;
   margin: 0 auto;
 }
 
@@ -1009,7 +1009,7 @@ body.menu-open {
 }
 
 .reviews__content {
-  max-width: 75rem;
+  max-width: 85.375rem;
   margin: 0 auto;
 }
 
@@ -1034,7 +1034,7 @@ body.menu-open {
 }
 
 .base__box {
-  background-color: white;
+  background-color: #ffffff;
   padding: 2.5rem;
 }
 
