@@ -65,42 +65,42 @@ body {
     margin: 0 auto;
   }
   
-  /* Reviews Section */
-  /*нет пока @import
-  /*$background-color: white;
-  $header-font: 'Raleway', sans-serif;
-  $header-font-size: 36px;
-  $review-font-size: 14px;
-  $text-color: #818b7e;
-  $card-spacing: 66px;*/
+  /*Reviews Section */
+  .reviews
+  background-color: white;
+  header-font: 'Raleway', sans-serif;
+  header-font-size: 36px;
+  review-font-size: 14px;
+  text-color: #818b7e;
+  card-spacing: 66px;*/
   .reviews {
-    padding: 40px 20px;
-    background-color: #eaeaea;
+  padding: 40px 20px;
+  background-color: #eaeaea;
   }
   .reviews__content {
-    max-width: 1200px;
-    margin: 0 auto;
-  .reviews__content-container {
-    /*height: 720px;
+  max-width: 1200px;
+  margin: 0 auto;
+.reviews__content-container {
+    height: 720px;
     background-color: $background-color;
     display: flex;
     flex-direction: row; 
     gap: $card-spacing; 
-    align-items: flex-start;*/ 
+    align-items: flex-start; 
   }
-  .reviews__content-card {
-  /*background-color: #f9f9f9; 
+.reviews__content-card {
+  background-color: #f9f9f9; 
   border: 1px solid #e0e0e0; 
   border-radius: 8px;
   padding: 20px; 
   width: 200px;
-    */
+    
   }
   .reviews__content-card-title {
-    /*font-family: $header-font;
+    font-family: $header-font;
     font-size: $header-font-size;
     color: $text-color;
-    margin-bottom: 10px;*/ 
+    margin-bottom: 10px; 
   }
   /* Blog Section */
   .blog {
