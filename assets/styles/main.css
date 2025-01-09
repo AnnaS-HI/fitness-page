@@ -2,19 +2,22 @@
 @import "../fonts/Raleway/stylesheet.css";
 @font-face {
   font-family: "Cardo";
-  src: url("../fonts/Cardo/cardo-regular-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-regular-webfont.woff") format("woff");
+  src: url("../fonts/Cardo/cardo-regular-webfont.woff2") format("woff2"),
+    url("../fonts/Cardo/cardo-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Cardo";
-  src: url("../fonts/Cardo/cardo-bold-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-bold-webfont.woff") format("woff");
+  src: url("../fonts/Cardo/cardo-bold-webfont.woff2") format("woff2"),
+    url("../fonts/Cardo/cardo-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Cardo";
-  src: url("../fonts/Cardo/cardo-italic-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-italic-webfont.woff") format("woff");
+  src: url("../fonts/Cardo/cardo-italic-webfont.woff2") format("woff2"),
+    url("../fonts/Cardo/cardo-italic-webfont.woff") format("woff");
   font-weight: 400;
   font-style: italic;
 }
@@ -325,7 +328,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   max-height: 41.563rem;
   border: none;
 }
@@ -549,9 +552,9 @@ body.menu-open {
   width: 3rem;
   height: 3rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: top;
-     object-position: top;
+  object-position: top;
   display: block;
 }
 
@@ -735,7 +738,7 @@ body.menu-open {
   height: 42.5rem;
   border-radius: 2.1875rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .heading {
@@ -860,16 +863,16 @@ body.menu-open {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .intensives__card:nth-child(1) .intensives__image,
 .intensives__card:nth-child(6) .intensives__image {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: top;
-     object-position: top;
+  object-position: top;
 }
 
 .intensives__image:hover {
@@ -1234,7 +1237,7 @@ body.menu-open {
   font-family: "Raleway", serif;
   justify-content: flex-start;
   font-size: 2.25rem;
-  padding: 3.125rem 0 3.125rem 8%;
+  padding: 3.125rem 0 3.125rem 5%;
   margin: 0;
   text-align: left;
   color: #ffffff;
@@ -1280,7 +1283,7 @@ body.menu-open {
   font-family: "Raleway", serif;
   font-size: 0.875rem;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .social {
@@ -1361,4 +1364,4 @@ body.menu-open {
   .footer-column ul > li.icons {
     margin-bottom: 1.25rem;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
