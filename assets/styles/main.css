@@ -732,9 +732,9 @@ body.menu-open {
 }
 /* Training Section */
 .training {
-  padding: 2.5rem 1.25rem;
+  padding: 2.5rem 0;
   background-color: #e6e6e6;
-  height: 56.25rem;
+  height: auto;
   width: 100%;
 }
 
@@ -753,7 +753,7 @@ body.menu-open {
 }
 
 .training_text {
-  height: 42.5rem;
+  height: auto;
   grid-column: 1/2;
 }
 
@@ -794,12 +794,15 @@ body.menu-open {
 
 @media screen and (max-width: 25rem) {
   .training {
-    height: 43.75rem;
+    height: auto;
+    padding: 10px;
   }
   .training__content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 10px;
+    padding-top: 30px;
   }
   .heading {
     text-align: center;
