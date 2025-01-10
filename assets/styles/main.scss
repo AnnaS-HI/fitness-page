@@ -66,13 +66,14 @@ body {
   }
   
   /*Reviews Section */
-  .reviews
-  background-color: white;
-  header-font: 'Raleway', sans-serif;
+.reviews {
+  background-color: #f9f9f9
+  header font: 'Raleway', sans-serif;
   header-font-size: 36px;
   review-font-size: 14px;
   text-color: #818b7e;
-  card-spacing: 66px;*/
+  card-spacing: 66px;
+}
   .reviews {
   padding: 40px 20px;
   background-color: #eaeaea;
