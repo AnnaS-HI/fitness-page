@@ -795,7 +795,6 @@ body.menu-open {
 @media screen and (max-width: 25rem) {
   .training {
     height: auto;
-    padding: 10px;
   }
   .training__content {
     display: flex;
