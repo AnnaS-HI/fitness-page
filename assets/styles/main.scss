@@ -51,6 +51,15 @@ $button-radius: 1.0625rem; /* 17px */
 $section-padding: 2.5rem; /* 40px */
 $container-max-width: 85.375rem; /* 1366px */
 $gap-large: 2.5625rem; /* 41px */
+$line-height-description: 1.8rem;
+$font-size-bullet: 1.5rem;
+/* Переменные для мобильной версии */
+$font-size-title-mobile: 1.5rem; /* 24px */
+$font-size-subtitle-mobile: 1.25rem; /* 20px */
+$font-size-description-mobile: 1.125rem; /* 18px */
+$font-size-button-mobile: 0.8125rem; /* 13px */
+$line-height-description-mobile: 1.5rem; /* 24px */
+$font-size-bullet-mobile: 1.25rem; /* 20px */
 
 html {
   scroll-behavior: smooth;
@@ -484,17 +493,17 @@ body.menu-open {
   }
 
   .hero__title {
-    font-size: 0.8125rem;
+    font-size: $font-size-title-mobile;
     margin-bottom: 2.0625rem;
   }
 
   .hero__subtitle {
-    font-size: 0.75rem;
+    font-size: $font-size-subtitle-mobile;
     margin-bottom: 2.0625rem;
   }
 
   .hero__description {
-    font-size: 0.6875rem;
+    font-size: $font-size-description-mobile;
     margin-bottom: 2.0625rem;
     line-height: 1.5;
     padding: 0 3rem;
@@ -503,7 +512,7 @@ body.menu-open {
   .hero__button {
     width: 8.125rem;
     height: 1.875rem;
-    font-size: 0.6875rem;
+    font-size: $font-size-button-mobile;
     border-radius: 1rem;
     margin: 0 auto;
     text-align: center;
@@ -511,17 +520,17 @@ body.menu-open {
   }
 
   .hero__right {
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; 
+    width: 100%;
     height: auto;
     margin-top: 1rem;
   }
   .hero__video {
-    width: 90%; 
+    width: 90%;
     height: auto;
-    max-height: 50vh; 
+    max-height: 50vh;
     object-fit: cover;
   }
 }
@@ -560,7 +569,7 @@ body.menu-open {
 .about__title {
   color: $color-secondary;
   max-width: calc(100% - $section-padding * 2);
-  font-size: 1.875rem;
+  font-size: $font-size-title;
   padding: 0;
   text-align: left;
   margin: 0;
@@ -597,7 +606,7 @@ body.menu-open {
 }
 
 .about__text {
-  font-size: 1.2rem;
+  font-size: $font-size-description;
   color: $color-secondary;
   line-height: 1.6;
   word-wrap: break-word;
@@ -625,7 +634,7 @@ body.menu-open {
   }
 
   .about__title {
-    font-size: 1.125rem;
+    font-size: $font-size-title-mobile;
     line-height: 1.4;
     max-width: 100%;
   }
@@ -668,7 +677,7 @@ body.menu-open {
   }
 
   .about__text {
-    font-size: 0.875rem;
+    font-size: $font-size-description-mobile;
     line-height: 1.5;
     text-align: left;
     width: 100%;
@@ -691,10 +700,10 @@ body.menu-open {
 }
 
 .path__title {
-  font-family: "Maharlika", sans-serif;
-  font-size: 36px;
+  font-family: $font-primary;
+  font-size: $font-size-title;
   color: $color-white;
-  margin-bottom: 106px;
+  margin-bottom: $section-padding;
 }
 
 .path__list {
@@ -708,10 +717,10 @@ body.menu-open {
   font-family: $font-primary;
   font-size: $font-size-description;
   color: $color-white;
-  line-height: 45px;
-  margin-bottom: 10px;
+  line-height: $line-height-description;
+  margin-bottom: 15px;
   position: relative;
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
 .path__item::before {
@@ -720,8 +729,10 @@ body.menu-open {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 22px;
+  font-size: $font-size-bullet;
+  color: $color-white;
 }
+
 @media (max-width: 768px) {
   .path {
     height: auto;
@@ -734,7 +745,7 @@ body.menu-open {
   }
 
   .path__title {
-    font-size: $font-size-title;
+    font-size: $font-size-title-mobile;
     margin-bottom: 40px;
   }
 
@@ -744,13 +755,23 @@ body.menu-open {
   }
 
   .path__item {
-    font-size: 20px;
+    font-size: $font-size-description-mobile;
     line-height: 30px;
     margin-bottom: 5px;
+    position: relative;
+    padding-left: 25px; /* Отступ для точки */
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание текста и точки */
   }
 
   .path__item::before {
-    font-size: 18px;
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem; /* Размер точки для мобильных */
+    line-height: 1; /* Убираем лишнее межстрочное расстояние */
+    top: 0; /* Сброс смещения */
+    transform: none; /* Убираем лишние преобразования */
   }
 }
 
@@ -793,7 +814,7 @@ body.menu-open {
 }
 
 .heading {
-  font-size: 2.25rem;
+  font-size: $font-size-title;
   color: $text-color;
   display: block;
   margin-bottom: 3.875rem;
@@ -801,7 +822,7 @@ body.menu-open {
 }
 
 .training_points li {
-  font-size: 1.3125rem;
+  font-size: $font-size-description;
   color: $text-color;
   margin-top: 2.1875rem;
   text-align: justify;
@@ -828,7 +849,7 @@ body.menu-open {
 
   .heading {
     text-align: center;
-    font-size: 0.8125rem;
+    font-size: $font-size-title-mobile;
     margin: 0 auto;
   }
 
@@ -854,7 +875,7 @@ body.menu-open {
   }
 
   .training_points li {
-    font-size: 0.5625rem;
+    font-size: $font-size-description-mobile;
     margin-top: 0.9375rem;
   }
 
@@ -883,7 +904,7 @@ body.menu-open {
 
 .intensives__title {
   font-family: $font-secondary;
-  font-size: 2.25rem;
+  font-size: $font-size-title;
   color: $color-primary;
   margin-bottom: 3.125rem;
 }
@@ -944,7 +965,7 @@ body.menu-open {
 
 .intensives__name {
   font-family: $font-secondary;
-  font-size: 1.5rem;
+  font-size: $font-size-subtitle;
   color: $color-primary;
   text-align: center;
   line-height: 1.4;
@@ -1019,6 +1040,28 @@ body.menu-open {
   .intensives__container {
     max-width: 100%;
     padding: 0 0.5rem;
+  }
+
+  .intensives__title {
+    font-size: $font-size-title-mobile;
+    margin-bottom: 2rem;
+  }
+
+  .intensives__name {
+    font-size: $font-size-subtitle-mobile;
+    line-height: 1.4;
+    max-width: 68%;
+    margin: 0.5rem auto 0;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intensives__button {
+    width: 11rem;
+    height: 3rem;
+    border-radius: $radius-large;
+    font-size: $font-size-button-mobile;
   }
 
   .intensives__cards {
@@ -1107,14 +1150,14 @@ body.menu-open {
 .base__title {
   font-family: $font-primary;
   color: $text-color;
-  font-size: 2.1875rem;
+  font-size: $font-size-title;
   text-align: center;
 }
 
 .base__subtitle {
   font-family: $font-secondary;
   color: $text-color;
-  font-size: 1.3125rem;
+  font-size: $font-size-subtitle;
   font-weight: bold;
   text-align: center;
 }
@@ -1247,11 +1290,11 @@ body.menu-open {
   }
 
   .base__title {
-    font-size: 0.875rem;
+    font-size: $font-size-title-mobile;
   }
 
   .base__subtitle {
-    font-size: 0.875rem;
+    font-size: $font-size-subtitle-mobile;
   }
 
   .base__cards {
@@ -1272,7 +1315,7 @@ body.menu-open {
   .base__btn {
     width: 7.5rem;
     height: 2.25rem;
-    font-size: 0.875rem;
+    font-size: $font-size-button-mobile;
   }
 
   .modal__body1,
@@ -1323,7 +1366,7 @@ body.menu-open {
 .nav {
   font-family: $font-secondary;
   justify-content: flex-start;
-  font-size: 2.25rem;
+  font-size: $font-size-title;
   padding: 3.125rem 0 3.125rem 8%;
   margin: 0;
   text-align: left;
@@ -1401,7 +1444,7 @@ body.menu-open {
 /* Media */
 @media screen and (max-width: 25rem) {
   .nav {
-    font-size: 1.5rem;
+    font-size: $font-size-title-mobile;
     text-align: center;
     padding: 1rem;
   }
@@ -1431,7 +1474,7 @@ body.menu-open {
     display: block;
     padding: 0.3125rem 0;
     justify-content: center;
-    font-size: 0.75rem;
+    font-size: $font-size-description-mobile;
     text-align: center;
   }
 
