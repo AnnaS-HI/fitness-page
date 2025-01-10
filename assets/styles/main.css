@@ -1016,7 +1016,19 @@ body.menu-open {
   }
   .intensives__card {
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 70%; /* Устанавливаем ширину карточки 70% от экрана */
+    height: auto; /* Чтобы высота адаптировалась под содержимое */
+    padding: 1rem;
+  }
+  .intensives__image-wrapper {
+    max-width: 100%; /* Адаптируем изображение под ширину карточки */
+    height: auto;
+  }
+  .intensives__image {
+    width: 100%; /* Изображение растягивается на всю ширину карточки */
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .popup {
     width: 70%;
