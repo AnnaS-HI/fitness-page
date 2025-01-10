@@ -291,7 +291,7 @@ body {
   background-color: #ffffff;
   color: #333333;
   font-family: "Cardo", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1.0625rem;
   border-radius: 1.0625rem;
   border: none;
   cursor: pointer;
@@ -821,7 +821,7 @@ body.menu-open {
   font-family: "Raleway", serif;
   font-size: 2.25rem;
   color: #cda498;
-  margin-bottom: 7.5rem;
+  margin-bottom: 3.125rem;
 }
 
 /* Сетка карточек */
@@ -902,7 +902,7 @@ body.menu-open {
   border-radius: 0.9375rem;
   background-color: #cda498;
   font-family: "Cardo", Arial, sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
   color: #2e2e2f;
   border: none;
   cursor: pointer;
@@ -974,7 +974,7 @@ body.menu-open {
     display: none;
   }
   .popup-title {
-    font-size: 1rem;
+    font-size: 1.0625rem;
   }
   .popup-description {
     font-size: 0.8125rem;
@@ -1071,7 +1071,7 @@ body.menu-open {
   font-family: "Raleway", serif;
   background-color: #818b7e;
   font-family: "Raleway", serif;
-  font-size: 1rem;
+  font-size: 1.0625rem;
   font-weight: bold;
   color: #f9f9f9;
   width: 11.5625rem;
