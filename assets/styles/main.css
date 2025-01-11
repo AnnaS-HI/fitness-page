@@ -39,6 +39,13 @@
 /* Переменные */
 /* 10px */
 /* 15px */
+/* Переменные для мобильной версии */
+/* 24px */
+/* 20px */
+/* 18px */
+/* 13px */
+/* 24px */
+/* 20px */
 body {
   margin: 0;
   font-family: "Cardo", Arial, sans-serif;
@@ -239,10 +246,25 @@ body {
   color: #ffffff;
 }
 
-.base__span {
+.modal__span {
   font-family: "Raleway", serif;
   font-size: 0.875rem; /* 14px */
   color: #ffffff;
+}
+
+.modal__link {
+  font-family: "Raleway", serif;
+  font-size: 0.875rem; /* 14px */
+  color: #2e2e2f;
+  text-decoration: none;
+}
+
+.modal__link:hover {
+  color: #ffffff;
+}
+
+.modal__link:active {
+  color: #818b7e;
 }
 
 .slogan {
@@ -273,10 +295,10 @@ body {
     padding: 0.9375rem; /* 15px */
   }
   .base__title {
-    font-size: 0.875rem; /* 14px */
+    /* 24px */
   }
   .base__subtitle {
-    font-size: 0.875rem; /* 14px */
+    /* 20px */
   }
   .base__cards {
     grid-template-columns: 1fr;
@@ -287,13 +309,13 @@ body {
     gap: 1.25rem; /* 20px */
   }
   .base__img {
-    max-width: 115px;
-    max-height: 115px;
+    max-width: 215px;
+    max-height: 215px;
   }
   .base__btn {
     width: 7.5rem; /* 120px */
     height: 2.25rem; /* 36px */
-    font-size: 0.875rem; /* 14px */
+    /* 13px */
   }
   .modal__body1, .modal__body2, .modal__body3 {
     display: flex;
@@ -320,7 +342,7 @@ body {
     font-size: 1.875rem; /* 30px */
   }
   .slogan {
-    font-size: 0.75rem; /* 12px */
+    /* 18px */
     margin-top: 2rem; /* 32px */
   }
 }

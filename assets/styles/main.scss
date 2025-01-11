@@ -65,6 +65,14 @@ $color-section: #ffff;
 $color-modal-bg: #c5b1aa;
 $text-color: #818b7e;
 
+/* Переменные для мобильной версии */
+$font-size-title-mobile: 1.5rem; /* 24px */
+$font-size-subtitle-mobile: 1.25rem; /* 20px */
+$font-size-description-mobile: 1.125rem; /* 18px */
+$font-size-button-mobile: 0.8125rem; /* 13px */
+$line-height-description-mobile: 1.5rem; /* 24px */
+$font-size-bullet-mobile: 1.25rem; /* 20px */
+
 body {
   margin: 0;
   font-family: $font-primary;
@@ -274,10 +282,26 @@ body {
   color: $color-bg-light;
   }
 
-  .base__span {
+  .modal__span {
     font-family: $font-secondary ;
     font-size: 0.875rem; /* 14px */
-    color: $color-bg-light;;
+    color: $color-bg-light;
+  }
+
+  .modal__link {
+    font-family: $font-secondary ;
+    font-size: 0.875rem; /* 14px */
+    color: $color-secondary;
+    text-decoration: none;
+  }
+
+
+  .modal__link:hover {
+    color: $color-bg-light;
+  }
+
+  .modal__link:active {
+    color: $text-color;
   }
   
   .slogan {
@@ -316,11 +340,11 @@ body {
     padding: 0.9375rem; /* 15px */
   }
     .base__title {
-    font-size: 0.875rem; /* 14px */
+      $font-size-title-mobile: 1.5rem; /* 24px */
   }
 
   .base__subtitle {
-    font-size: 0.875rem; /* 14px */
+    $font-size-subtitle-mobile: 1.25rem; /* 20px */
   }
 
   .base__cards {
@@ -334,14 +358,14 @@ body {
   }
 
   .base__img {
-    max-width: 115px; 
-    max-height: 115px; 
+    max-width: 215px; 
+    max-height: 215px; 
   }
 
   .base__btn {
     width: 7.5rem; /* 120px */
     height: 2.25rem; /* 36px */
-    font-size: 0.875rem; /* 14px */
+    $font-size-button-mobile: 0.8125rem; /* 13px */
   }
 
 .modal__body1, .modal__body2, .modal__body3 {
@@ -374,7 +398,7 @@ body {
 }
 
   .slogan {
-    font-size: 0.75rem;  /* 12px */
+    $font-size-description-mobile: 1.125rem; /* 18px */
     margin-top: 2rem; /* 32px */
   }
 
