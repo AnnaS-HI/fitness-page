@@ -1384,7 +1384,7 @@ body.menu-open {
   font-family: $font-secondary;
   justify-content: flex-start;
   font-size: 2.25rem;
-  padding: 3.125rem 0 3.125rem 5%;
+  padding: 3.125rem 0 3.125rem 3%;
   font-size: $font-size-title;
   margin: 0;
   text-align: left;
@@ -1497,10 +1497,8 @@ body.menu-open {
   }
 
   .social {
-    flex-direction: column;
-    align-items: center;
-    gap: $gap-small;
-    margin-bottom: 1.25rem;
+    justify-content: center;
+    flex-direction: row;
   }
 
   .social img {
