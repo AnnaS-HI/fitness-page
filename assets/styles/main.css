@@ -2,22 +2,19 @@
 @import "../fonts/Raleway/stylesheet.css";
 @font-face {
   font-family: "Cardo";
-  src: url("../fonts/Cardo/cardo-regular-webfont.woff2") format("woff2"),
-    url("../fonts/Cardo/cardo-regular-webfont.woff") format("woff");
+  src: url("../fonts/Cardo/cardo-regular-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Cardo";
-  src: url("../fonts/Cardo/cardo-bold-webfont.woff2") format("woff2"),
-    url("../fonts/Cardo/cardo-bold-webfont.woff") format("woff");
+  src: url("../fonts/Cardo/cardo-bold-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Cardo";
-  src: url("../fonts/Cardo/cardo-italic-webfont.woff2") format("woff2"),
-    url("../fonts/Cardo/cardo-italic-webfont.woff") format("woff");
+  src: url("../fonts/Cardo/cardo-italic-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-italic-webfont.woff") format("woff");
   font-weight: 400;
   font-style: italic;
 }
@@ -36,6 +33,13 @@
 /* 40px */
 /* 1366px */
 /* 41px */
+/* Переменные для мобильной версии */
+/* 24px */
+/* 20px */
+/* 18px */
+/* 13px */
+/* 24px */
+/* 20px */
 html {
   scroll-behavior: smooth;
 }
@@ -294,7 +298,7 @@ body {
   background-color: #ffffff;
   color: #333333;
   font-family: "Cardo", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1.0625rem;
   border-radius: 1.0625rem;
   border: none;
   cursor: pointer;
@@ -328,7 +332,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   max-height: 41.563rem;
   border: none;
 }
@@ -437,11 +441,11 @@ body.menu-open {
 }
 @media (max-width: 768px) {
   .hero {
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem 1rem;
+    padding: 1rem;
   }
   .hero__container {
     height: 100%;
@@ -455,35 +459,48 @@ body.menu-open {
     margin: 0 auto;
   }
   .hero__icon {
-    width: 6.25rem;
-    height: 6.25rem;
-    margin-bottom: 2.0625rem;
+    width: 5rem;
+    height: 5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
   }
   .hero__title {
-    font-size: 0.8125rem;
-    margin-bottom: 2.0625rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
   .hero__subtitle {
-    font-size: 0.75rem;
-    margin-bottom: 2.0625rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
   }
   .hero__description {
-    font-size: 0.6875rem;
-    margin-bottom: 2.0625rem;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
     line-height: 1.5;
-    padding: 0 3rem;
+    padding: 0 2rem;
   }
   .hero__button {
-    width: 8.125rem;
-    height: 1.875rem;
-    font-size: 0.6875rem;
+    width: 8rem;
+    height: 2rem;
+    font-size: 0.8125rem;
     border-radius: 1rem;
     margin: 0 auto;
     text-align: center;
     padding: 0;
   }
   .hero__right {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+  .hero__video {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 /* About Section */
@@ -520,7 +537,7 @@ body.menu-open {
 .about__title {
   color: #2e2e2f;
   max-width: calc(100% - 5rem);
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   padding: 0;
   text-align: left;
   margin: 0;
@@ -552,14 +569,14 @@ body.menu-open {
   width: 3rem;
   height: 3rem;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   -o-object-position: top;
-  object-position: top;
+     object-position: top;
   display: block;
 }
 
 .about__text {
-  font-size: 1.2rem;
+  font-size: 1.5625rem;
   color: #2e2e2f;
   line-height: 1.6;
   word-wrap: break-word;
@@ -585,7 +602,7 @@ body.menu-open {
     height: auto;
   }
   .about__title {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     line-height: 1.4;
     max-width: 100%;
   }
@@ -622,7 +639,7 @@ body.menu-open {
     flex-shrink: 0;
   }
   .about__text {
-    font-size: 0.875rem;
+    font-size: 1.125rem;
     line-height: 1.5;
     text-align: left;
     width: 100%;
@@ -644,10 +661,10 @@ body.menu-open {
 }
 
 .path__title {
-  font-family: "Maharlika", sans-serif;
-  font-size: 36px;
+  font-family: "Cardo", Arial, sans-serif;
+  font-size: 1.75rem;
   color: #ffffff;
-  margin-bottom: 106px;
+  margin-bottom: 2.5rem;
 }
 
 .path__list {
@@ -661,10 +678,10 @@ body.menu-open {
   font-family: "Cardo", Arial, sans-serif;
   font-size: 1.5625rem;
   color: #ffffff;
-  line-height: 45px;
-  margin-bottom: 10px;
+  line-height: 1.8rem;
+  margin-bottom: 15px;
   position: relative;
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
 .path__item::before {
@@ -673,7 +690,8 @@ body.menu-open {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 22px;
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -686,27 +704,37 @@ body.menu-open {
     max-width: 90%;
   }
   .path__title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: 40px;
   }
   .path__list {
-    margin-left: 30px;
-    margin-bottom: 10px;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   .path__item {
-    font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 5px;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
   }
   .path__item::before {
-    font-size: 18px;
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    top: 0;
+    transform: none;
   }
 }
 /* Training Section */
 .training {
-  padding: 2.5rem 1.25rem;
+  padding: 2.5rem 0;
   background-color: #e6e6e6;
-  height: 56.25rem;
+  height: auto;
   width: 100%;
 }
 
@@ -725,7 +753,7 @@ body.menu-open {
 }
 
 .training_text {
-  height: 42.5rem;
+  height: auto;
   grid-column: 1/2;
 }
 
@@ -738,11 +766,11 @@ body.menu-open {
   height: 42.5rem;
   border-radius: 2.1875rem;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .heading {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   color: #818b7e;
   display: block;
   margin-bottom: 3.875rem;
@@ -750,7 +778,7 @@ body.menu-open {
 }
 
 .training_points li {
-  font-size: 1.3125rem;
+  font-size: 1.5625rem;
   color: #818b7e;
   margin-top: 2.1875rem;
   text-align: justify;
@@ -766,16 +794,18 @@ body.menu-open {
 
 @media screen and (max-width: 25rem) {
   .training {
-    height: 43.75rem;
+    height: auto;
   }
   .training__content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 10px;
+    padding-top: 30px;
   }
   .heading {
     text-align: center;
-    font-size: 0.8125rem;
+    font-size: 1.5rem;
     margin: 0 auto;
   }
   .heading_text {
@@ -796,7 +826,7 @@ body.menu-open {
     border-radius: 2.1875rem;
   }
   .training_points li {
-    font-size: 0.5625rem;
+    font-size: 1.125rem;
     margin-top: 0.9375rem;
   }
   .ending_text {
@@ -822,9 +852,9 @@ body.menu-open {
 
 .intensives__title {
   font-family: "Raleway", serif;
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   color: #cda498;
-  margin-bottom: 7.5rem;
+  margin-bottom: 3.125rem;
 }
 
 /* Сетка карточек */
@@ -863,16 +893,16 @@ body.menu-open {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .intensives__card:nth-child(1) .intensives__image,
 .intensives__card:nth-child(6) .intensives__image {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   -o-object-position: top;
-  object-position: top;
+     object-position: top;
 }
 
 .intensives__image:hover {
@@ -886,7 +916,7 @@ body.menu-open {
 
 .intensives__name {
   font-family: "Raleway", serif;
-  font-size: 1.5rem;
+  font-size: 1.625rem;
   color: #cda498;
   text-align: center;
   line-height: 1.4;
@@ -905,7 +935,7 @@ body.menu-open {
   border-radius: 0.9375rem;
   background-color: #cda498;
   font-family: "Cardo", Arial, sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
   color: #2e2e2f;
   border: none;
   cursor: pointer;
@@ -957,6 +987,25 @@ body.menu-open {
     max-width: 100%;
     padding: 0 0.5rem;
   }
+  .intensives__title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .intensives__name {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    max-width: 68%;
+    margin: 0.5rem auto 0;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .intensives__button {
+    width: 11rem;
+    height: 3rem;
+    border-radius: 0.9375rem;
+    font-size: 0.8125rem;
+  }
   .intensives__cards {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -966,7 +1015,19 @@ body.menu-open {
   }
   .intensives__card {
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 70%; /* Устанавливаем ширину карточки 70% от экрана */
+    height: auto; /* Чтобы высота адаптировалась под содержимое */
+    padding: 1rem;
+  }
+  .intensives__image-wrapper {
+    max-width: 100%; /* Адаптируем изображение под ширину карточки */
+    height: auto;
+  }
+  .intensives__image {
+    width: 100%; /* Изображение растягивается на всю ширину карточки */
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .popup {
     width: 70%;
@@ -977,7 +1038,7 @@ body.menu-open {
     display: none;
   }
   .popup-title {
-    font-size: 1rem;
+    font-size: 1.0625rem;
   }
   .popup-description {
     font-size: 0.8125rem;
@@ -1036,14 +1097,14 @@ body.menu-open {
 .base__title {
   font-family: "Cardo", Arial, sans-serif;
   color: #818b7e;
-  font-size: 2.1875rem;
+  font-size: 1.75rem;
   text-align: center;
 }
 
 .base__subtitle {
   font-family: "Raleway", serif;
   color: #818b7e;
-  font-size: 1.3125rem;
+  font-size: 1.625rem;
   font-weight: bold;
   text-align: center;
 }
@@ -1074,7 +1135,7 @@ body.menu-open {
   font-family: "Raleway", serif;
   background-color: #818b7e;
   font-family: "Raleway", serif;
-  font-size: 1rem;
+  font-size: 1.0625rem;
   font-weight: bold;
   color: #f9f9f9;
   width: 11.5625rem;
@@ -1172,10 +1233,10 @@ body.menu-open {
     padding: 0.9375rem;
   }
   .base__title {
-    font-size: 0.875rem;
+    font-size: 1.5rem;
   }
   .base__subtitle {
-    font-size: 0.875rem;
+    font-size: 1.25rem;
   }
   .base__cards {
     grid-template-columns: 1fr;
@@ -1192,7 +1253,7 @@ body.menu-open {
   .base__btn {
     width: 7.5rem;
     height: 2.25rem;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
   .modal__body1,
   .modal__body2,
@@ -1236,8 +1297,8 @@ body.menu-open {
 .nav {
   font-family: "Raleway", serif;
   justify-content: flex-start;
-  font-size: 2.25rem;
-  padding: 3.125rem 0 3.125rem 5%;
+  font-size: 1.75rem;
+  padding: 3.125rem 0 3.125rem 8%;
   margin: 0;
   text-align: left;
   color: #ffffff;
@@ -1283,7 +1344,7 @@ body.menu-open {
   font-family: "Raleway", serif;
   font-size: 0.875rem;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .social {
@@ -1340,7 +1401,7 @@ body.menu-open {
     display: block;
     padding: 0.3125rem 0;
     justify-content: center;
-    font-size: 0.75rem;
+    font-size: 1.125rem;
     text-align: center;
   }
   .social {
@@ -1364,4 +1425,4 @@ body.menu-open {
   .footer-column ul > li.icons {
     margin-bottom: 1.25rem;
   }
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

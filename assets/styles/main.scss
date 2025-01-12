@@ -44,13 +44,22 @@ $radius-large: 0.9375rem; /*15px; */
 $font-size-title: 1.75rem; /* 28px */
 $font-size-subtitle: 1.625rem; /* 26px */
 $font-size-description: 1.5625rem; /* 25px */
-$font-size-button: 1rem; /* 16px */
+$font-size-button: 1.0625rem; /* 16px */
 $button-width: 17rem; /* 286px */
 $button-height: 4rem; /* 68px */
 $button-radius: 1.0625rem; /* 17px */
 $section-padding: 2.5rem; /* 40px */
 $container-max-width: 85.375rem; /* 1366px */
 $gap-large: 2.5625rem; /* 41px */
+$line-height-description: 1.8rem;
+$font-size-bullet: 1.5rem;
+/* Переменные для мобильной версии */
+$font-size-title-mobile: 1.5rem; /* 24px */
+$font-size-subtitle-mobile: 1.25rem; /* 20px */
+$font-size-description-mobile: 1.125rem; /* 18px */
+$font-size-button-mobile: 0.8125rem; /* 13px */
+$line-height-description-mobile: 1.5rem; /* 24px */
+$font-size-bullet-mobile: 1.25rem; /* 20px */
 
 html {
   scroll-behavior: smooth;
@@ -81,6 +90,7 @@ body {
     padding: 0 0.5rem; /* Уменьшаем внутренние отступы */
   }
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -457,11 +467,11 @@ body.menu-open {
 
 @media (max-width: 768px) {
   .hero {
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem 1rem;
+    padding: 1rem;
   }
 
   .hero__container {
@@ -478,32 +488,33 @@ body.menu-open {
   }
 
   .hero__icon {
-    width: 6.25rem;
-    height: 6.25rem;
-    margin-bottom: 2.0625rem;
+    width: 5rem;
+    height: 5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .hero__title {
-    font-size: 0.8125rem;
-    margin-bottom: 2.0625rem;
+    font-size: $font-size-title-mobile;
+    margin-bottom: 1rem;
   }
 
   .hero__subtitle {
-    font-size: 0.75rem;
-    margin-bottom: 2.0625rem;
+    font-size: $font-size-subtitle-mobile;
+    margin-bottom: 1rem;
   }
 
   .hero__description {
-    font-size: 0.6875rem;
-    margin-bottom: 2.0625rem;
+    font-size: $font-size-description-mobile;
+    margin-bottom: 1.5rem;
     line-height: 1.5;
-    padding: 0 3rem;
+    padding: 0 2rem;
   }
 
   .hero__button {
-    width: 8.125rem;
-    height: 1.875rem;
-    font-size: 0.6875rem;
+    width: 8rem;
+    height: 2rem;
+    font-size: $font-size-button-mobile;
     border-radius: 1rem;
     margin: 0 auto;
     text-align: center;
@@ -511,7 +522,18 @@ body.menu-open {
   }
 
   .hero__right {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+  .hero__video {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: cover;
   }
 }
 
@@ -549,7 +571,7 @@ body.menu-open {
 .about__title {
   color: $color-secondary;
   max-width: calc(100% - $section-padding * 2);
-  font-size: 1.875rem;
+  font-size: $font-size-title;
   padding: 0;
   text-align: left;
   margin: 0;
@@ -586,7 +608,7 @@ body.menu-open {
 }
 
 .about__text {
-  font-size: 1.2rem;
+  font-size: $font-size-description;
   color: $color-secondary;
   line-height: 1.6;
   word-wrap: break-word;
@@ -614,7 +636,7 @@ body.menu-open {
   }
 
   .about__title {
-    font-size: 1.125rem;
+    font-size: $font-size-title-mobile;
     line-height: 1.4;
     max-width: 100%;
   }
@@ -657,7 +679,7 @@ body.menu-open {
   }
 
   .about__text {
-    font-size: 0.875rem;
+    font-size: $font-size-description-mobile;
     line-height: 1.5;
     text-align: left;
     width: 100%;
@@ -680,10 +702,10 @@ body.menu-open {
 }
 
 .path__title {
-  font-family: "Maharlika", sans-serif;
-  font-size: 36px;
+  font-family: $font-primary;
+  font-size: $font-size-title;
   color: $color-white;
-  margin-bottom: 106px;
+  margin-bottom: $section-padding;
 }
 
 .path__list {
@@ -697,10 +719,10 @@ body.menu-open {
   font-family: $font-primary;
   font-size: $font-size-description;
   color: $color-white;
-  line-height: 45px;
-  margin-bottom: 10px;
+  line-height: $line-height-description;
+  margin-bottom: 15px;
   position: relative;
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
 .path__item::before {
@@ -709,8 +731,10 @@ body.menu-open {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 22px;
+  font-size: $font-size-bullet;
+  color: $color-white;
 }
+
 @media (max-width: 768px) {
   .path {
     height: auto;
@@ -723,31 +747,41 @@ body.menu-open {
   }
 
   .path__title {
-    font-size: $font-size-title;
+    font-size: $font-size-title-mobile;
     margin-bottom: 40px;
   }
 
   .path__list {
-    margin-left: 30px;
-    margin-bottom: 10px;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .path__item {
-    font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 5px;
+    font-size: $font-size-description-mobile;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
   }
 
   .path__item::before {
-    font-size: 18px;
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    top: 0;
+    transform: none;
   }
 }
 
 /* Training Section */
 .training {
-  padding: 2.5rem 1.25rem;
+  padding: 2.5rem 0;
   background-color: $color-border;
-  height: 56.25rem;
+  height: auto;
   width: 100%;
 }
 
@@ -766,7 +800,7 @@ body.menu-open {
 }
 
 .training_text {
-  height: 42.5rem;
+  height: auto;
   grid-column: 1 / 2;
 }
 
@@ -782,7 +816,7 @@ body.menu-open {
 }
 
 .heading {
-  font-size: 2.25rem;
+  font-size: $font-size-title;
   color: $text-color;
   display: block;
   margin-bottom: 3.875rem;
@@ -790,7 +824,7 @@ body.menu-open {
 }
 
 .training_points li {
-  font-size: 1.3125rem;
+  font-size: $font-size-description;
   color: $text-color;
   margin-top: 2.1875rem;
   text-align: justify;
@@ -806,18 +840,20 @@ body.menu-open {
 
 @media screen and (max-width: 25rem) {
   .training {
-    height: 43.75rem;
+    height: auto;
   }
 
   .training__content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 10px;
+    padding-top: 30px;
   }
 
   .heading {
     text-align: center;
-    font-size: 0.8125rem;
+    font-size: $font-size-title-mobile;
     margin: 0 auto;
   }
 
@@ -843,7 +879,7 @@ body.menu-open {
   }
 
   .training_points li {
-    font-size: 0.5625rem;
+    font-size: $font-size-description-mobile;
     margin-top: 0.9375rem;
   }
 
@@ -872,9 +908,9 @@ body.menu-open {
 
 .intensives__title {
   font-family: $font-secondary;
-  font-size: 2.25rem;
+  font-size: $font-size-title;
   color: $color-primary;
-  margin-bottom: 7.5rem;
+  margin-bottom: 3.125rem;
 }
 
 /* Сетка карточек */
@@ -933,7 +969,7 @@ body.menu-open {
 
 .intensives__name {
   font-family: $font-secondary;
-  font-size: 1.5rem;
+  font-size: $font-size-subtitle;
   color: $color-primary;
   text-align: center;
   line-height: 1.4;
@@ -952,7 +988,7 @@ body.menu-open {
   border-radius: $radius-large;
   background-color: $color-primary;
   font-family: $font-primary;
-  font-size: 0.9375rem;
+  font-size: $font-size-button;
   color: $color-secondary;
   border: none;
   cursor: pointer;
@@ -1010,6 +1046,28 @@ body.menu-open {
     padding: 0 0.5rem;
   }
 
+  .intensives__title {
+    font-size: $font-size-title-mobile;
+    margin-bottom: 2rem;
+  }
+
+  .intensives__name {
+    font-size: $font-size-subtitle-mobile;
+    line-height: 1.4;
+    max-width: 68%;
+    margin: 0.5rem auto 0;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intensives__button {
+    width: 11rem;
+    height: 3rem;
+    border-radius: $radius-large;
+    font-size: $font-size-button-mobile;
+  }
+
   .intensives__cards {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1020,7 +1078,20 @@ body.menu-open {
 
   .intensives__card {
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 70%; /* Устанавливаем ширину карточки 70% от экрана */
+    height: auto; /* Чтобы высота адаптировалась под содержимое */
+    padding: 1rem;
+  }
+
+  .intensives__image-wrapper {
+    max-width: 100%; /* Адаптируем изображение под ширину карточки */
+    height: auto;
+  }
+
+  .intensives__image {
+    width: 100%; /* Изображение растягивается на всю ширину карточки */
+    height: auto;
+    object-fit: cover;
   }
 
   .popup {
@@ -1096,14 +1167,14 @@ body.menu-open {
 .base__title {
   font-family: $font-primary;
   color: $text-color;
-  font-size: 2.1875rem;
+  font-size: $font-size-title;
   text-align: center;
 }
 
 .base__subtitle {
   font-family: $font-secondary;
   color: $text-color;
-  font-size: 1.3125rem;
+  font-size: $font-size-subtitle;
   font-weight: bold;
   text-align: center;
 }
@@ -1236,11 +1307,11 @@ body.menu-open {
   }
 
   .base__title {
-    font-size: 0.875rem;
+    font-size: $font-size-title-mobile;
   }
 
   .base__subtitle {
-    font-size: 0.875rem;
+    font-size: $font-size-subtitle-mobile;
   }
 
   .base__cards {
@@ -1261,7 +1332,7 @@ body.menu-open {
   .base__btn {
     width: 7.5rem;
     height: 2.25rem;
-    font-size: 0.875rem;
+    font-size: $font-size-button-mobile;
   }
 
   .modal__body1,
@@ -1314,6 +1385,7 @@ body.menu-open {
   justify-content: flex-start;
   font-size: 2.25rem;
   padding: 3.125rem 0 3.125rem 5%;
+  font-size: $font-size-title;
   margin: 0;
   text-align: left;
   color: $color-white;
@@ -1390,7 +1462,7 @@ body.menu-open {
 /* Media */
 @media screen and (max-width: 25rem) {
   .nav {
-    font-size: 1.5rem;
+    font-size: $font-size-title-mobile;
     text-align: center;
     padding: 1rem;
   }
@@ -1420,7 +1492,7 @@ body.menu-open {
     display: block;
     padding: 0.3125rem 0;
     justify-content: center;
-    font-size: 0.75rem;
+    font-size: $font-size-description-mobile;
     text-align: center;
   }
 
