@@ -66,17 +66,21 @@ body {
   }
   
   /*Reviews Section */
+$bg-color: #ffffff;
+$text-color: #818b7e;
+$header-font-size: 36px;
+$card-font-size: 14px;
+$card-gap: 66px;
+$height: 720px;
 .reviews {
-  background-color: #f9f9f9
-  header font: 'Raleway', sans-serif;
-  header-font-size: 36px;
-  review-font-size: 14px;
-  text-color: #818b7e;
-  card-spacing: 66px;
+  background-color: $bg-color;
+  font-family: 'Raleway', sans-serif;
+  color: $text-color;
+  gap: $card-gap;
 }
   .reviews {
   padding: 40px 20px;
-  background-color: #eaeaea;
+  
   }
   .reviews__content {
   max-width: 1200px;
