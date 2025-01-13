@@ -1085,7 +1085,7 @@ body.menu-open {
 
   .intensives__image-wrapper {
     max-width: 100%; /* Адаптируем изображение под ширину карточки */
-    height: auto; 
+    height: auto;
   }
 
   .intensives__image {
@@ -1383,8 +1383,9 @@ body.menu-open {
 .nav {
   font-family: $font-secondary;
   justify-content: flex-start;
+  font-size: 2.25rem;
+  padding: 3.125rem 0 3.125rem 3%;
   font-size: $font-size-title;
-  padding: 3.125rem 0 3.125rem 8%;
   margin: 0;
   text-align: left;
   color: $color-white;
@@ -1430,7 +1431,7 @@ body.menu-open {
   font-family: $font-secondary;
   font-size: 0.875rem;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .social {
@@ -1496,10 +1497,8 @@ body.menu-open {
   }
 
   .social {
-    flex-direction: column;
-    align-items: center;
-    gap: $gap-small;
-    margin-bottom: 1.25rem;
+    justify-content: center;
+    flex-direction: row;
   }
 
   .social img {
