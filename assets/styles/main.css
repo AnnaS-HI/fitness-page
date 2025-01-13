@@ -1061,10 +1061,13 @@ body.menu-open {
 /* Reviews Section */
 .reviews {
   padding: 2.5rem 1.25rem;
-  background-color: #ffffff;
+
+  background-color: #eaeaea;
+
   font-family: "Raleway", serif;
   color: #818b7e;
   gap: 66px;
+
 }
 
 .reviews__content {
@@ -1096,12 +1099,15 @@ body.menu-open {
   margin-bottom: 10px;
 }
 
+
 /* Base Section */
 .base {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #ffffff;
+
+  background-color: #e6e6e6;
+
   padding: 2.5rem 1.25rem;
 }
 
@@ -1117,7 +1123,9 @@ body.menu-open {
 }
 
 .base__box {
-  background-color: #ffffff;
+
+  background-color: #e6e6e6;
+
   padding: 2.5rem;
 }
 
@@ -1139,7 +1147,9 @@ body.menu-open {
 .base__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 13.125rem;
+
+  gap: 8.125rem;
+
   justify-items: center;
   margin-top: 4.4375rem;
 }
@@ -1147,6 +1157,9 @@ body.menu-open {
 .base__img {
   max-width: 300px;
   max-height: 300px;
+
+  border-radius: 7px;
+
 }
 
 .base__card {
@@ -1155,6 +1168,10 @@ body.menu-open {
   align-items: center;
   justify-content: space-between;
   gap: 3.75rem;
+}
+
+.base__subtitle {
+  margin-bottom: 0;
 }
 
 .base__btn {
@@ -1195,7 +1212,9 @@ body.menu-open {
   top: 0.625rem;
   right: 0.625rem;
   cursor: pointer;
+
   font-family: "Raleway", serif;
+
   font-size: 1.875rem;
   border: none;
   color: #f9f9f9;

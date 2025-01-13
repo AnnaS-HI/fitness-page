@@ -1169,7 +1169,7 @@ body.menu-open {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: $color-white;
+  background-color: $color-border;
   padding: 2.5rem 1.25rem;
 }
 
@@ -1185,7 +1185,7 @@ body.menu-open {
 }
 
 .base__box {
-  background-color: $color-white;
+background-color: $color-border;
   padding: $section-padding;
 }
 
@@ -1207,7 +1207,7 @@ body.menu-open {
 .base__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 13.125rem;
+  gap: 8.125rem;
   justify-items: center;
   margin-top: 4.4375rem;
 }
@@ -1215,6 +1215,7 @@ body.menu-open {
 .base__img {
   max-width: 300px;
   max-height: 300px;
+  border-radius: 7px;
 }
 
 .base__card {
@@ -1223,6 +1224,10 @@ body.menu-open {
   align-items: center;
   justify-content: space-between;
   gap: 3.75rem;
+
+}
+.base__subtitle{
+  margin-bottom: 0;
 }
 
 .base__btn {
@@ -1263,7 +1268,7 @@ body.menu-open {
   top: $spacing-small;
   right: $spacing-small;
   cursor: pointer;
-  font-family: $font-secondary;
+ 
   font-size: 1.875rem;
   border: none;
   color: $color-bg-light;
