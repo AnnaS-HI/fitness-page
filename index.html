@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Наталья Матвеева</title>
     <link rel="stylesheet" href="./assets/fonts/Raleway/stylesheet.css" />
-
     <link rel="stylesheet" href="./assets/styles/main.css" />
   </head>
 
@@ -306,7 +305,7 @@
               </div>
             </div>
 
-            <div class="intensives__card" onclick="togglePopup(this)">
+            <div class="intensives__card" id="intensives3" onclick="togglePopup(this)">
               <div class="intensives__image-wrapper">
                 <img
                   src="./assets/images/intensiv_card3.jpg"
@@ -514,7 +513,7 @@
               </div>
             </div>
 
-            <div class="intensives__card" onclick="togglePopup(this)">
+            <div class="intensives__card" id="intensives6" onclick="togglePopup(this)">
               <div class="intensives__image-wrapper">
                 <img
                   src="./assets/images/intensiv_card6.jpg"
@@ -616,12 +615,36 @@
         </div>
       </section>
 
-      <!-- Reviews Section -->
-      <section class="reviews" id="reviews">
-        <div class="reviews__content">
-          <!-- код -->
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+      <div class="reviews__content">
+        <h2 class="reviews__content-subtitle">ОТЗЫВЫ</h2>
+        <div class="reviews__content-container">
+          <div class="reviews__content-card">"Boost your product and service's
+            credibility by adding testimonials from
+            your clients. People love
+            recommendations so feedback from
+            others who've tried it is invaluable."
+            <span class="reviews__content-card-title">HAILEY COPELAND</span>
+          </div>
+          <div class="reviews__content-card"> "Boost your product and service's
+            credibility by adding testimonials from
+            your clients. 
+            People love recommendations so
+            feedback from others who've tried it is
+            invaluable.
+            <span class="reviews__content-card-title"> MIGUEL RIVERA</span> 
+          </div>
+          <div class="reviews__content-card"> "Boost your product and service's
+            credibility by adding testimonials from
+            your clients. Feedback from others
+            who've tried it is invaluable."
+            <span class="reviews__content-card-title">CARLY FERRIS
+            </span>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <!-- Base Section -->
       <section class="base" id="base">
@@ -683,7 +706,7 @@
               </div>
             </div>
 
-             <div class="base__card">
+            <div class="base__card">
                 <h3 class="base__subtitle">Осанка</h3>
                 <img class="base__img"  src="./assets/images/photo_2024-12-24 14.56.23.jpeg " alt="осанка">
                 <button class="base__btn" onclick="openModal('modal2')" aria-label="Открыть просмотр модального окна">Посмотреть</button>
@@ -835,7 +858,7 @@
                 </div>
               </li>
               <li>
-                <a href="#intensives">ИНТЕНСИВЫ</a>
+                <a href="#intensives6">ИНТЕНСИВЫ</a>
               </li>
               <li>
                 <a href="#reviews">ОТЗЫВЫ</a>
@@ -849,7 +872,7 @@
                 <a href="#legal">ЮРИДИЧЕСКАЯ ИНФОРМАЦИЯ</a>
               </li>
               <li>
-                <a href="#personal-trainings">ПЕРСОНАЛЬНЫЕ ТРЕНИРОВКИ</a>
+                <a href="#intensives3">ПЕРСОНАЛЬНЫЕ ТРЕНИРОВКИ</a>
               </li>
             </ul>
           </div>
@@ -858,5 +881,6 @@
       </section>
     </div>
     <script src="./js/scripts.js"></script>
+
   </body>
 </html>

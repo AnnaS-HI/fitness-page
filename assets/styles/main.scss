@@ -39,6 +39,7 @@ $color-white: #ffffff;
 $transition-fast: 0.3s ease;
 $spacing-small: 0.625rem; /* 10px */
 $gap-small: 0.625rem; /* 10px */
+$card-gap: 66px;
 $radius-small: 0.625rem; /* 10px */
 $radius-large: 0.9375rem; /*15px; */
 $font-size-title: 1.75rem; /* 28px */
@@ -1135,12 +1136,37 @@ body.menu-open {
 /* Reviews Section */
 .reviews {
   padding: 2.5rem 1.25rem;
-  background-color: #eaeaea;
+  background-color: $color-white;
+  font-family: $font-secondary;
+  color: $text-color;
+  gap: $card-gap;
 }
 
 .reviews__content {
   max-width: $container-max-width;
   margin: 0 auto;
+}
+
+.reviews__content-container {
+  height: 720px;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: row; 
+  gap: $card-gap; 
+  align-items: flex-start; 
+}
+.reviews__content-card {
+  background-color: $color-bg-light; 
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px;
+  padding: 20px; 
+  width: 200px;
+}
+.reviews__content-card-title {
+  font-family: $font-primary;
+  font-size: $font-size-title;
+  color: $text-color;
+  margin-bottom: 10px; 
 }
 
 /* Base Section */
