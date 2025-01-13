@@ -793,22 +793,24 @@ body.menu-open {
   grid-column-gap: 6.25rem;
 }
 
-.heading_text {
-  grid-column: 1 / 2;
+.heading__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   bottom: 3.875rem;
-  justify-items: start;
+  
 }
 
-.training_text {
+.training__text {
   height: auto;
   grid-column: 1 / 2;
 }
 
-.training_image {
+.training__image {
   grid-column: 2 / 3;
 }
 
-.img_training {
+.img__training {
   width: 32.8125rem;
   height: 42.5rem;
   border-radius: 2.1875rem;
@@ -817,13 +819,15 @@ body.menu-open {
 
 .heading {
   font-size: $font-size-title;
+  font-weight: bold;
   color: $text-color;
   display: block;
   margin-bottom: 3.875rem;
-  font-family: $font-secondary;
+  font-family: $font-primary;
 }
 
-.training_points li {
+.training__points li {
+  font-family: $font-secondary;
   font-size: $font-size-description;
   color: $text-color;
   margin-top: 2.1875rem;
@@ -832,13 +836,13 @@ body.menu-open {
 
 .ending {
   color: $text-color;
-  font: bold 1.5rem $font-secondary;
+  font-weight: bold ;
   margin-top: 3.875rem;
   display: block;
   text-align: center;
 }
 
-@media screen and (max-width: 25rem) {
+@media (max-width: 768px) {
   .training {
     height: auto;
   }
@@ -857,33 +861,33 @@ body.menu-open {
     margin: 0 auto;
   }
 
-  .heading_text {
+  .heading__text {
     order: 1;
   }
 
-  .training_image {
+  .training__image {
     order: 2;
     margin-bottom: 1.25rem;
     margin-top: 1.25rem;
   }
 
-  .training_text {
+  .training__text {
     order: 3;
     width: 17.5rem;
   }
 
-  .img_training {
+  .img__training {
     width: 9.375rem;
     height: 13.75rem;
     border-radius: 2.1875rem;
   }
 
-  .training_points li {
+  .training__points li {
     font-size: $font-size-description-mobile;
     margin-top: 0.9375rem;
   }
 
-  .ending_text {
+  .ending__text {
     margin-top: 2.125rem;
   }
 
@@ -1243,7 +1247,6 @@ background-color: $color-border;
   top: $spacing-small;
   right: $spacing-small;
   cursor: pointer;
- 
   font-size: 1.875rem;
   border: none;
   color: $color-bg-light;
