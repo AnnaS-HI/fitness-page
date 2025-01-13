@@ -1103,6 +1103,49 @@ body.menu-open {
   margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+  .reviews__content {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+  .reviews__content-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .reviews__content-card-title {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    max-width: 68%;
+    margin: 0.5rem auto 0;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .reviews__content-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-content: center;
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+  .reviews__content-card {
+    margin: 0 auto;
+    max-width: 70%;
+    height: auto;
+    padding: 1rem;
+  }
+}
+/* Advantages Section */
+.advantages {
+  padding: 2.5rem 1.25rem;
+  background-color: #f2f2f2;
+}
+
+.advantages__content {
+  max-width: 85.375rem;
+  margin: 0 auto;
+}
+
 /* Base Section */
 .base {
   display: flex;
