@@ -1267,38 +1267,37 @@ body.menu-open {
   font-family: $font-primary;
   font-size: 0.875rem;
   color: $color-bg-light;
-  }
+}
 
-  .modal__span {
-    font-family: $font-secondary ;
-    font-size: 0.875rem; /* 14px */
-    color: $color-bg-light;
-  }
+.modal__span {
+  font-family: $font-secondary;
+  font-size: 0.875rem; /* 14px */
+  color: $color-bg-light;
+}
 
-  .modal__link {
-    font-family: $font-secondary ;
-    font-size: 0.875rem; /* 14px */
-    color: $color-secondary;
-    text-decoration: none;
-  }
+.modal__link {
+  font-family: $font-secondary;
+  font-size: 0.875rem; /* 14px */
+  color: $color-secondary;
+  text-decoration: none;
+}
 
-  .modal__link:hover {
-    color: $color-bg-light;
-  }
+.modal__link:hover {
+  color: $color-bg-light;
+}
 
-  .modal__link:active {
-    color: $text-color;
-  }
-  
-  .slogan {
-    font-family: $font-secondary;
-    font-size: 1.875rem; /* 30px */
-    font-weight: 500; 
-    color: $color-primary;
-    margin-top: 11.1875rem; /* 179px */
-    text-align: center;
-    padding: 1.25rem; /* 20px */
-  }
+.modal__link:active {
+  color: $text-color;
+}
+
+.slogan {
+  font-family: $font-secondary;
+  font-size: 1.875rem; /* 30px */
+  font-weight: 500;
+  color: $color-primary;
+  margin-top: 11.1875rem; /* 179px */
+  text-align: center;
+  padding: 1.25rem; /* 20px */
 }
 
 .base__span {
@@ -1476,7 +1475,6 @@ body.menu-open {
 .footer-column ul > li.info {
   margin-bottom: 6.25rem;
 }
-
 
 .footer-column ul > li.icons {
   margin-bottom: 2.5rem;
