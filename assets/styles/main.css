@@ -1067,6 +1067,12 @@ body.menu-open {
   gap: 66px;
 }
 
+.reviews__content-subtitle {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 3.125rem;
+}
+
 .reviews__content {
   max-width: 85.375rem;
   margin: 0 auto;
@@ -1075,6 +1081,7 @@ body.menu-open {
 .reviews__content-container {
   height: 720px;
   background-color: #ffffff;
+  justify-content: center;
   display: flex;
   flex-direction: row;
   gap: 66px;

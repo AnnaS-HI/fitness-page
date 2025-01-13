@@ -1135,6 +1135,13 @@ body.menu-open {
   font-family: $font-secondary;
   color: $text-color;
   gap: $card-gap;
+  
+}
+
+.reviews__content-subtitle {
+  text-align: center;
+  font-size: $font-size-title;
+  margin-bottom: 3.125rem;
 }
 
 .reviews__content {
@@ -1145,6 +1152,7 @@ body.menu-open {
 .reviews__content-container {
   height: 720px;
   background-color: $color-white;
+  justify-content: center;
   display: flex;
   flex-direction: row; 
   gap: $card-gap; 
