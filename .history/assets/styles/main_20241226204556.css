@@ -1,0 +1,92 @@
+/* General Styles */
+
+@font-face {
+    font-family: 'Cardo';
+    src: url('../fonts/Cardo/cardo-regular-webfont.woff2') format('woff2'),
+      url('../fonts/Cardo/cardo-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Cardo';
+    src: url('../fonts/Cardo/cardo-bold-webfont.woff2') format('woff2'),
+      url('../fonts/Cardo/cardo-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Cardo';
+    src: url('../fonts/Cardo/cardo-italic-webfont.woff2') format('woff2'),
+      url('../fonts/Cardo/cardo-italic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-Thin.woff2') format('woff2'),
+      url('../fonts/Raleway/Raleway-Thin.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-Bold.woff2') format('woff2'),
+      url('../fonts/Raleway/Raleway-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-ThinItalic.woff2') format('woff2'),
+      url('../fonts/Raleway/Raleway-ThinItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+/* Переменные */
+$font-primary: 'Cardo', Arial, sans-serif;
+$font-secondary: 'Raleway', serif;
+$color-primary: #cda498 ;
+$color-secondary: #2e2e2f ;
+$color-bg-light: #f9f9f9 ;
+$color-bg-dark: #333333;
+$color-popup-bg: #c5b1aa;
+$color-overlay: rgba(0, 0, 0, 0.8);
+$color-border: #e6e6e6 ;
+$transition-fast: 0.3s ease;
+$radius-small: 10px;
+$radius-large: 15px;
+$color-section: #ffff;
+$color-modal-bg: #c5b1aa;
+$text-color: #818b7e;
+
+
+.about{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 970px;
+  align-items: center;
+  justify-items: center;
+  color: #2e2e2f;
+  background-color: #e6e6e6;
+  padding: 40px 20px;
+  
+}
+
+.about__content{
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: auto;
+}
+
+.block_pfoto{
+  border-radius: 20px;
+}

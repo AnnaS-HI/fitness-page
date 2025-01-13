@@ -1,0 +1,136 @@
+/* General Styles */
+
+@font-face {
+    font-family: 'Cardo';
+    src: url('../fonts/Cardo/cardo-regular-webfont.woff2') format('woff2'),
+      url('../fonts/Cardo/cardo-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Cardo';
+    src: url('../fonts/Cardo/cardo-bold-webfont.woff2') format('woff2'),
+      url('../fonts/Cardo/cardo-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Cardo';
+    src: url('../fonts/Cardo/cardo-italic-webfont.woff2') format('woff2'),
+      url('../fonts/Cardo/cardo-italic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-Thin.woff2') format('woff2'),
+      url('../fonts/Raleway/Raleway-Thin.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-Bold.woff2') format('woff2'),
+      url('../fonts/Raleway/Raleway-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-ThinItalic.woff2') format('woff2'),
+      url('../fonts/Raleway/Raleway-ThinItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+
+.about{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  g
+  height: 970;
+  color: #2e2e2f;
+  background-color: #e6e6e6;
+  padding: 40px 20px;
+  
+}
+
+.about__content{
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+  padding: 2.5rem 1.25rem;
+  margin: auto;
+  font-size: 18px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3; 
+}
+
+.argument{
+  display: flex;
+  grid-template-columns: 10% 90%;
+}
+
+h2{
+  color: #2e2e2f;
+  background-color: #e6e6e6;
+  font-size: 30px;
+  text-align: left;
+}
+
+.who{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2; 
+}
+
+.ava{
+  grid-row-start: 1;
+  grid-row-end: 3;
+  padding: 40px 20px;
+  margin: auto;
+}
+
+
+/*Адаптация для mobil*/
+
+@media screen and (max-width: 800px) {
+  .about{
+    display: flex;
+    gap: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: column
+  }
+
+  .about__content{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    font-size: 9px;
+  }
+  h2{
+    display: flex;
+    margin-top: 1%;
+    font-size: 9px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  .ava{
+    width: 150px;
+    height: 220px;
+  }
+  }
