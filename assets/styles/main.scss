@@ -1153,10 +1153,10 @@ body.menu-open {
   height: 720px;
   background-color: $color-white;
   justify-content: center;
-  display: flex;
-  flex-direction: row; 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: $card-gap; 
-  align-items: flex-start; 
+  align-items: start; 
 }
 .reviews__content-card {
   background-color: $color-bg-light; 
@@ -1170,6 +1170,34 @@ body.menu-open {
   font-size: $font-size-title;
   color: $text-color;
   margin-bottom: 10px; 
+}
+
+@media (min-width: 1025px) {
+  .reviews__content {
+    max-width: $container-max-width;
+    padding: 0 1.25rem;
+  }
+
+  .reviews__content-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .reviews__content {
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+
+  .reviews__content-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
