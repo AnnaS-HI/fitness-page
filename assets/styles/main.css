@@ -746,22 +746,23 @@ body.menu-open {
   grid-column-gap: 6.25rem;
 }
 
-.heading_text {
-  grid-column: 1/2;
+.heading__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   bottom: 3.875rem;
-  justify-items: start;
 }
 
-.training_text {
+.training__text {
   height: auto;
   grid-column: 1/2;
 }
 
-.training_image {
+.training__image {
   grid-column: 2/3;
 }
 
-.img_training {
+.img__training {
   width: 32.8125rem;
   height: 42.5rem;
   border-radius: 2.1875rem;
@@ -771,13 +772,15 @@ body.menu-open {
 
 .heading {
   font-size: 1.75rem;
+  font-weight: bold;
   color: #818b7e;
   display: block;
   margin-bottom: 3.875rem;
-  font-family: "Raleway", serif;
+  font-family: "Cardo", Arial, sans-serif;
 }
 
-.training_points li {
+.training__points li {
+  font-family: "Raleway", serif;
   font-size: 1.5625rem;
   color: #818b7e;
   margin-top: 2.1875rem;
@@ -786,13 +789,13 @@ body.menu-open {
 
 .ending {
   color: #818b7e;
-  font: bold 1.5rem "Raleway", serif;
+  font-weight: bold;
   margin-top: 3.875rem;
   display: block;
   text-align: center;
 }
 
-@media screen and (max-width: 25rem) {
+@media (max-width: 768px) {
   .training {
     height: auto;
   }
@@ -808,28 +811,28 @@ body.menu-open {
     font-size: 1.5rem;
     margin: 0 auto;
   }
-  .heading_text {
+  .heading__text {
     order: 1;
   }
-  .training_image {
+  .training__image {
     order: 2;
     margin-bottom: 1.25rem;
     margin-top: 1.25rem;
   }
-  .training_text {
+  .training__text {
     order: 3;
     width: 17.5rem;
   }
-  .img_training {
+  .img__training {
     width: 9.375rem;
     height: 13.75rem;
     border-radius: 2.1875rem;
   }
-  .training_points li {
+  .training__points li {
     font-size: 1.125rem;
     margin-top: 0.9375rem;
   }
-  .ending_text {
+  .ending__text {
     margin-top: 2.125rem;
   }
   .ending {
