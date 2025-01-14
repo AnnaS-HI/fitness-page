@@ -1040,17 +1040,6 @@ body.menu-open {
     font-size: 0.8125rem;
   }
 }
-/* Advantages Section */
-.advantages {
-  padding: 2.5rem 1.25rem;
-  background-color: #f2f2f2;
-}
-
-.advantages__content {
-  max-width: 85.375rem;
-  margin: 0 auto;
-}
-
 /* Reviews Section */
 .reviews {
   padding: 2rem 1rem;
@@ -1087,18 +1076,25 @@ body.menu-open {
 }
 
 .reviews__card {
-  flex: 0 0 33.333%; /* Для большого экрана — 3 карточки в ряд */
+  flex: 0 0 33.333%;
   max-width: 33.333%;
   padding: 1rem;
   text-align: center;
   box-sizing: border-box;
+  height: 27rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .reviews__image {
   width: 100%;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 0.625rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .reviews__button {
