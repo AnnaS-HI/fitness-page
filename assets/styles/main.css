@@ -791,14 +791,6 @@ body.menu-open {
   text-align: justify;
 }
 
-.ending {
-  color: #818b7e;
-  font-weight: bold;
-  margin-top: 3.875rem;
-  display: block;
-  text-align: center;
-}
-
 @media (max-width: 768px) {
   .training {
     height: auto;
@@ -835,12 +827,6 @@ body.menu-open {
   .training__points li {
     font-size: 1.125rem;
     margin-top: 0.9375rem;
-  }
-  .ending__text {
-    margin-top: 2.125rem;
-  }
-  .ending {
-    font-size: 0.75rem;
   }
 }
 /* Intensives Section */
