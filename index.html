@@ -305,7 +305,11 @@
               </div>
             </div>
 
-            <div class="intensives__card" id="intensives3" onclick="togglePopup(this)">
+            <div
+              class="intensives__card"
+              id="intensives3"
+              onclick="togglePopup(this)"
+            >
               <div class="intensives__image-wrapper">
                 <img
                   src="./assets/images/intensiv_card3.jpg"
@@ -513,7 +517,11 @@
               </div>
             </div>
 
-            <div class="intensives__card" id="intensives6" onclick="togglePopup(this)">
+            <div
+              class="intensives__card"
+              id="intensives6"
+              onclick="togglePopup(this)"
+            >
               <div class="intensives__image-wrapper">
                 <img
                   src="./assets/images/intensiv_card6.jpg"
@@ -615,36 +623,64 @@
         </div>
       </section>
 
-    <!-- Reviews Section -->
-    <section class="reviews" id="reviews">
-      <div class="reviews__content">
-        <h2 class="reviews__content-subtitle">ОТЗЫВЫ</h2>
-        <div class="reviews__content-container">
-          <div class="reviews__content-card">"Boost your product and service's
-            credibility by adding testimonials from
-            your clients. People love
-            recommendations so feedback from
-            others who've tried it is invaluable."
-            <span class="reviews__content-card-title">HAILEY COPELAND</span>
-          </div>
-          <div class="reviews__content-card"> "Boost your product and service's
-            credibility by adding testimonials from
-            your clients. 
-            People love recommendations so
-            feedback from others who've tried it is
-            invaluable.
-            <span class="reviews__content-card-title"> MIGUEL RIVERA</span> 
-          </div>
-          <div class="reviews__content-card"> "Boost your product and service's
-            credibility by adding testimonials from
-            your clients. Feedback from others
-            who've tried it is invaluable."
-            <span class="reviews__content-card-title">CARLY FERRIS
-            </span>
+      <!-- Reviews Section -->
+      <section class="reviews" id="reviews">
+        <div class="reviews__container">
+          <h2 class="reviews__title">Результаты</h2>
+          <div class="reviews__slider">
+            <button
+              class="reviews__button reviews__button--prev"
+              aria-label="Предыдущий результат"
+            >
+              ‹
+            </button>
+            <div class="reviews__track">
+              <!-- Каждая карточка -->
+              <div class="reviews__card">
+                <img
+                  src="./assets/images/review_card1.jpg"
+                  alt="результат 1"
+                  class="reviews__image"
+                />
+              </div>
+              <div class="reviews__card">
+                <img
+                  src="./assets/images/review_card2.png"
+                  alt="результат 2"
+                  class="reviews__image"
+                />
+              </div>
+              <div class="reviews__card">
+                <img
+                  src="./assets/images/review_card3.png"
+                  alt="результат 3"
+                  class="reviews__image"
+                />
+              </div>
+              <div class="reviews__card">
+                <img
+                  src="./assets/images/review_card4.jpg"
+                  alt="результат 4"
+                  class="reviews__image"
+                />
+              </div>
+              <div class="reviews__card">
+                <img
+                  src="./assets/images/review_card5.png"
+                  alt="результат 5"
+                  class="reviews__image"
+                />
+              </div>
+            </div>
+            <button
+              class="reviews__button reviews__button--next"
+              aria-label="Следующий результат"
+            >
+              ›
+            </button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       <!-- Base Section -->
       <section class="base" id="base">
@@ -701,40 +737,66 @@
                   onclick="closeModal('modal1')"
                   aria-label="Закрыть просмотр модального окна"
                 >
-                ×
+                  ×
                 </button>
               </div>
             </div>
 
             <div class="base__card">
-                <h3 class="base__subtitle">Осанка</h3>
-                <img class="base__img"  src="./assets/images/photo_2024-12-24 14.56.23.jpeg " alt="осанка">
-                <button class="base__btn" onclick="openModal('modal2')" aria-label="Открыть просмотр модального окна">Посмотреть</button>
+              <h3 class="base__subtitle">Осанка</h3>
+              <img
+                class="base__img"
+                src="./assets/images/photo_2024-12-24 14.56.23.jpeg "
+                alt="осанка"
+              />
+              <button
+                class="base__btn"
+                onclick="openModal('modal2')"
+                aria-label="Открыть просмотр модального окна"
+              >
+                Посмотреть
+              </button>
+            </div>
+            <div class="modal" id="modal2">
+              <div class="modal__body2">
+                <h3 class="modal__subtitle">Осанка</h3>
+                <p class="modal__descr">
+                  Если грубо, осанка - это положение таза, грудной клетки и
+                  головы относительно друг друга. При нарушениях осанки меняется
+                  подвижность позвоночника, особенно грудной клетки и поясницы. 
+                  Если вы сутулитесь или наоборот держите «грудь колесом»; таз
+                  наклонен или смещен, то: подвижность грудной клетки (а значит
+                  и диафрагмы) ограничивается,дыхание становится
+                  поверхностным,поясница зажимается,появляется напряжение в шее
+                  И тогда любые физические упражнения (особенно на пресс❗️)
+                  будут выполняться с натуживанием и выталкиванием тазового дна,
+                  а это неэффективно:  выпирающий живот никуда не денется, да
+                  ещё и проблемы с тазовым дном можно заработать. Именно поэтому
+                  важно работать с подвижностью грудной клетки и таза,
+                  возвращать их в свое естественное положение. Тогда мышцы
+                  смогут оптимально подстраиваться под ваши движения и дыхание,
+                  и давление в полости живота будет распределяться равномерно.
+                  <br />Как итог: <br />• плоский живот <br />• здоровое тазовое
+                  дно <br />• отсутствие болей в спине <br />• сильное тело
+                  <br />• бодрость и энергия Наглядное видео о взаимосвязи формы
+                  живота и осанки смотри здесь:
+                </p>
+                <a
+                  class="modal__link"
+                  href="https://t.me/matveeva_insideout/169"
+                  target="_blank"
+                  rel="noopener nofollow"
+                  >https://t.me/matveeva_insideout/169</a
+                >
+                <button
+                  class="modal__close"
+                  onclick="closeModal('modal2')"
+                  aria-label="Закрыть просмотр модального окна"
+                >
+                  ×
+                </button>
               </div>
-              <div class="modal" id="modal2" >
-                <div class="modal__body2">
-                  <h3 class="modal__subtitle">Осанка</h3>
-                  <p class="modal__descr">
-                      Если грубо, осанка - это положение  таза, грудной клетки и головы относительно друг друга.
-                      При нарушениях осанки меняется подвижность позвоночника, особенно грудной клетки и поясницы. 
-                      Если вы сутулитесь или наоборот держите «грудь колесом»; таз наклонен или смещен, то: 
-                      подвижность грудной клетки (а значит и диафрагмы) ограничивается,дыхание становится поверхностным,поясница зажимается,появляется напряжение в шее
-                      И тогда любые физические упражнения (особенно на пресс❗️) будут выполняться с натуживанием и выталкиванием тазового дна, а это неэффективно:  выпирающий живот никуда не денется, да ещё и проблемы с тазовым дном можно заработать.
-                      Именно поэтому важно работать с подвижностью грудной клетки и таза, возвращать их в свое естественное положение.
-                      Тогда мышцы смогут оптимально подстраиваться под ваши движения и дыхание, и давление в полости живота будет распределяться равномерно.
-                    <br>Как итог:
-                    <br>• плоский живот 
-                    <br>• здоровое тазовое дно
-                    <br>• отсутствие болей в спине  
-                    <br>• сильное тело
-                    <br>• бодрость и энергия 
-                    Наглядное видео о взаимосвязи формы живота и осанки смотри здесь:
-                  </p>
-                    <a class="modal__link"  href="https://t.me/matveeva_insideout/169" target="_blank" rel="noopener nofollow">https://t.me/matveeva_insideout/169</a>
-                <button class="modal__close" onclick="closeModal('modal2')" aria-label="Закрыть просмотр модального окна">×</button>
-                </div>
-              </div>
-            
+            </div>
 
             <div class="base__card">
               <h3 class="base__subtitle">Мышцы тазового дна</h3>
@@ -786,13 +848,13 @@
                   onclick="closeModal('modal3')"
                   aria-label="Закрыть просмотр модального окна"
                 >
-                ×
+                  ×
                 </button>
               </div>
             </div>
-            </div>
           </div>
-        
+        </div>
+
         <span class="slogan">К себе - нежно</span>
       </section>
 
@@ -881,6 +943,5 @@
       </section>
     </div>
     <script src="./js/scripts.js"></script>
-
   </body>
 </html>

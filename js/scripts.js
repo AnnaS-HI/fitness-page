@@ -100,4 +100,81 @@ document.addEventListener('click', (event) => {
   }
 });
 
+//секция результаты
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.reviews__track');
+  const cards = document.querySelectorAll('.reviews__card');
+  const prevButton = document.querySelector('.reviews__button--prev');
+  const nextButton = document.querySelector('.reviews__button--next');
+  const cardWidth = cards[0].offsetWidth;
+  const visibleCards = 3; // Количество карточек, отображаемых одновременно
+  let index = visibleCards; // Начинаем со второй группы (с учетом клонов)
+
+  // Клонирование карточек для зацикливания
+  const firstClones = Array.from(cards)
+    .slice(0, visibleCards)
+    .map(card => card.cloneNode(true));
+  const lastClones = Array.from(cards)
+    .slice(-visibleCards)
+    .map(card => card.cloneNode(true));
+
+  // Добавляем клоны в начало и конец трека
+  firstClones.forEach(clone => track.appendChild(clone));
+  lastClones.reverse().forEach(clone => track.insertBefore(clone, track.firstChild));
+
+  // Устанавливаем начальную позицию трека
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+
+  const updateTrackPosition = () => {
+    track.style.transition = 'transform 0.5s ease';
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  };
+
+  const resetTrackPosition = (newIndex) => {
+    setTimeout(() => {
+      track.style.transition = 'none';
+      index = newIndex;
+      track.style.transform = `translateX(-${index * cardWidth}px)`;
+    }, 500); // Отключаем анимацию после перехода
+  };
+
+  // Обработчик кнопки Next
+  nextButton.addEventListener('click', () => {
+    index++;
+    updateTrackPosition();
+
+    // Если достигли конца, возвращаемся к началу
+    if (index === cards.length + visibleCards) {
+      resetTrackPosition(visibleCards);
+    }
+  });
+
+  // Обработчик кнопки Prev
+  prevButton.addEventListener('click', () => {
+    index--;
+    updateTrackPosition();
+
+    // Если достигли начала, возвращаемся к концу
+    if (index === 0) {
+      resetTrackPosition(cards.length);
+    }
+  });
+
+  // Автоматическая прокрутка
+  setInterval(() => {
+    index++;
+    updateTrackPosition();
+
+    // Зацикливание при автоматическом переходе
+    if (index === cards.length + visibleCards) {
+      resetTrackPosition(visibleCards);
+    }
+  }, 5000); // Прокрутка каждые 5 секунд
+});
+
+
+
+
+
+
 

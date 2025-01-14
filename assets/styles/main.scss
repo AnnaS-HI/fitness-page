@@ -710,7 +710,6 @@ body.menu-open {
   color: $color-white;
   margin-bottom: $section-padding;
   text-align: center;
-  
 }
 
 .path__list {
@@ -804,7 +803,6 @@ body.menu-open {
   flex-direction: row;
   justify-content: space-around;
   bottom: 3.875rem;
-  
 }
 
 .training__text {
@@ -842,7 +840,7 @@ body.menu-open {
 
 .ending {
   color: $text-color;
-  font-weight: bold ;
+  font-weight: bold;
   margin-top: 3.875rem;
   display: block;
   text-align: center;
@@ -1140,38 +1138,93 @@ body.menu-open {
 
 /* Reviews Section */
 .reviews {
-  padding: 2.5rem 1.25rem;
-  background-color: $color-white;
-  font-family: $font-secondary;
-  color: $text-color;
-  gap: $card-gap;
+  padding: 2rem 1rem;
+  background-color: $color-bg-light;
+  text-align: center;
 }
 
-.reviews__content {
+.reviews__container {
   max-width: $container-max-width;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
-.reviews__content-container {
-  height: 720px;
-  background-color: $color-white;
-  display: flex;
-  flex-direction: row; 
-  gap: $card-gap; 
-  align-items: flex-start; 
-}
-.reviews__content-card {
-  background-color: $color-bg-light; 
-  border: 1px solid #e0e0e0; 
-  border-radius: 8px;
-  padding: 20px; 
-  width: 200px;
-}
-.reviews__content-card-title {
+.reviews__title {
   font-family: $font-primary;
   font-size: $font-size-title;
-  color: $text-color;
-  margin-bottom: 10px; 
+  color: $color-primary;
+  margin-bottom: 2rem;
+}
+
+.reviews__slider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews__track {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+  width: 100%;
+}
+
+.reviews__card {
+  flex: 0 0 33.333%; /* Для большого экрана — 3 карточки в ряд */
+  max-width: 33.333%;
+  padding: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.reviews__image {
+  width: 100%;
+  height: auto;
+  border-radius: $radius-small;
+  margin-bottom: 1rem;
+}
+
+.reviews__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: $color-primary;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.reviews__button--prev {
+  left: 0.5rem;
+}
+
+.reviews__button--next {
+  right: 0.5rem;
+}
+
+@media (min-width: 1025px) {
+  .reviews__card {
+    flex: 0 0 33.333%; /* Три карточки в ряд */
+    max-width: 33.333%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .reviews__card {
+    flex: 0 0 50%; /* Две карточки в ряд */
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews__card {
+    flex: 0 0 100%; /* Одна карточка на экран */
+    max-width: 100%;
+  }
 }
 
 /* Base Section */
@@ -1195,7 +1248,7 @@ body.menu-open {
 }
 
 .base__box {
-background-color: $color-border;
+  background-color: $color-border;
   padding: $section-padding;
 }
 
@@ -1234,9 +1287,8 @@ background-color: $color-border;
   align-items: center;
   justify-content: space-between;
   gap: 3.75rem;
-
 }
-.base__subtitle{
+.base__subtitle {
   margin-bottom: 0;
 }
 
